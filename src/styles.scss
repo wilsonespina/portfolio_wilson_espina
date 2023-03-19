@@ -5,6 +5,7 @@
 }
 html {
     font-size: 62.5% /* makes 1rem 10px */
+    // font-size: clamp(1rem, 2vw, 2rem);
 }
 body {
     font-size: 1.6em; /* default font of 16px */
@@ -39,8 +40,21 @@ a:visited { color: purple }
 
 .container {
     width: 100%;
+    margin-bottom: 8rem;
 }
 
 .heading {
     text-transform: uppercase;
 }
+
+// @media screen and (min-width: 320px) {
+//     html {
+//       font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+//     }
+// }
+
+// @media screen and (min-width: 1000px) {
+//     html {
+//         font-size: 62.5%
+//     }
+// }

@@ -3,22 +3,39 @@
     justify-content: space-between;
     overflow: hidden;
 
-    .image {
-        max-width: 45ch; // TODO - update this
-        object-fit: cover;
-    }
-
     .info-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: end;
+        background-color: peachpuff;
+        flex-grow: 1;
+        padding-inline: min(5vw, 3rem);
+        padding-block: min(10vh, 5rem);
+        text-align: right;
+
+        
 
         .name {
             font-weight: 700;
+            font-size: clamp(2rem, 4vw + 1rem, 8rem);
         }
         .job {
             text-transform: uppercase;
+            font-size: clamp(1rem, 1.5vw + 1rem, 6rem);
         }
     }
+
+    .image-container {
+        background-color: beige;
+        max-width: 45ch; // TODO - update this
+        .image {
+            width: 100%;
+            object-fit: cover;
+            min-width: 150px;
+        }
+
+    }
+
 }
 
