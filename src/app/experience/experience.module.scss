@@ -5,3 +5,15 @@
  * .container {
  * }
 */
+
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+
+    .icon {
+        &:hover {
+            fill: pink;
+        }
+    }
+}

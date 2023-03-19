@@ -2,19 +2,18 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    container-type: inline-size;
 
     .info-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: end;
+        text-align: center;
         background-color: peachpuff;
         flex-grow: 1;
         padding-inline: min(5vw, 3rem);
         padding-block: min(10vh, 5rem);
-        text-align: right;
-
-        
 
         .name {
             font-weight: 700;
@@ -39,3 +38,12 @@
 
 }
 
+
+
+@container (max-width: 878px) {
+    .info-card {
+        .info-container {
+            align-items: center;
+        }
+    }
+}
