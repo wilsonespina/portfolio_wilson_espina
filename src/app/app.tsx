@@ -1,14 +1,23 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
+import SplashScreen from './splash-screen/splash-screen';
+import InfoCard from './info-card/info-card';
+import About from './about/about';
+import Experience from './experience/experience';
+import Contact from './contact/contact';
 
-import NxWelcome from './nx-welcome';
+import styles from './app.module.scss';
 
 export function App() {
   return (
     <>
-      <NxWelcome title="portfolio-ai" />
 
-      <div />
+    {/* <SplashScreen /> */}
+
+      <main className={styles['container']}>
+        <InfoCard name="Wilson Espina" job="Frontend Software Engineer"/>
+        <About />
+        <Experience />
+        <Contact />
+      </main>
     </>
   );
 }

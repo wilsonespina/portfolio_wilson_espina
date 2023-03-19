@@ -1,0 +1,22 @@
+.info-card {
+    display: flex;
+
+    .image {
+        max-width: 60ch;
+        object-fit: cover;
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .name {
+            font-weight: 700;
+        }
+        .job {
+            text-transform: uppercase;
+        }
+    }
+}
+
