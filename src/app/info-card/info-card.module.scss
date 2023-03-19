@@ -1,8 +1,10 @@
 .info-card {
     display: flex;
+    justify-content: space-between;
+    overflow: hidden;
 
     .image {
-        max-width: 60ch;
+        max-width: 45ch; // TODO - update this
         object-fit: cover;
     }
 

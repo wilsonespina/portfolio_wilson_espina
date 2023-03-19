@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  cacheDir: './node_modules/.vite/portfolio-ai',
+  cacheDir: './node_modules/.vite/portfolio-wilson-espina',
 
   server: {
     port: 4200,

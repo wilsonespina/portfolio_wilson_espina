@@ -8,12 +8,12 @@
       "executor": "@nrwl/cypress:cypress",
       "options": {
         "cypressConfig": "e2e/cypress.config.ts",
-        "devServerTarget": "portfolio-ai:serve:development",
+        "devServerTarget": "portfolio-wilson-espina:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "portfolio-ai:serve:production"
+          "devServerTarget": "portfolio-wilson-espina:serve:production"
         }
       }
     },
@@ -26,5 +26,5 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["portfolio-ai"]
+  "implicitDependencies": ["portfolio-wilson-espina"]
 }
