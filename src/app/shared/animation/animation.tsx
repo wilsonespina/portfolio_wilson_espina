@@ -1,34 +1,22 @@
-import { PropsWithChildren, ReactElement } from "react";
+import { PropsWithChildren, ReactElement, ReactNode, FC } from "react";
 import styles from './animation.module.scss';
 import { Animated } from 'react-animated-css';
 
-import type { AnimatedProps } from 'react-animated-css/lib/index';
+// import type { AnimatedProps } from 'react-animated-css/lib/index';
 
 /* eslint-disable-next-line */
 // export interface AnimationProps {
 //   children: JSX.Element,
 //   className: string
 // }
-interface Props extends AnimatedProps{
-  children: ReactElement
+interface Props {
+  children: string | JSX.Element | JSX.Element[] | (() => JSX.Element)
 }
 
-const Animation: React.FC<PropsWithChildren<Props>> = (props) => {
+const Animation = ({ children }: PropsWithChildren<Props>) => {
   return (
-    // <Animated animationIn="fadeInUp" isVisible={true}>
-    //   {children}
-    // </Animated> 
-
-    // <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true} className={className} >
-    //   <div>
-    //     hello world ;
-    //   </div>
-    // </Animated>
-
-    <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
-      <div>
-          hello world ;)
-      </div>
+    <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true} >
+      {children}
     </Animated>
   );
 }

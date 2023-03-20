@@ -3,13 +3,6 @@ import { useState } from 'react';
 import cn from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
-// type ReactText = string | number;
-// type ReactChild = ReactElement | ReactText;
-
-// interface ReactNodeArray extends Array<ReactNode> {}
-// type ReactFragment = object | ReactNodeArray;
-// type ReactNode = ReactChild | ReactFragment | ReactPortal | boolean | null | undefined;
-
 
 export interface IconProps {
   icon: IconDefinition,

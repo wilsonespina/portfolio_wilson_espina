@@ -21,49 +21,42 @@ export function Experience(props: ExperienceProps) {
       <h2 className={'heading'}>Experience</h2>
 
       <div className={styles['timeline']}>
-        { inView &&
-          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-3s', styles['timeline__event--type1'])}>
-            <>
-              <div className={styles['timeline__event__icon']}>
-                <FontAwesomeIcon icon={faPlane} className="fa-2x"/>
+        <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-3s', styles['timeline__event--type1'])} isVisible={inView}>
+          <div className={styles['timeline__event__icon']}>
+            <FontAwesomeIcon icon={faPlane} className="fa-2x"/>
 
-              </div>
-              <div className={styles['timeline__event__date']}>
-                03-2023
-              </div>
-              <div className={styles['timeline__event__content']}>
-                <div className={styles['timeline__event__title']}>
-                  Moved to Wellington, New Zealand
-                </div>
-                <div className={styles['timeline__event__description']}>
-                  <p>Moved for a new adventure</p>
-                </div>
-              </div>
-            </>
+          </div>
+          <div className={styles['timeline__event__date']}>
+            03-2023
+          </div>
+          <div className={styles['timeline__event__content']}>
+            <div className={styles['timeline__event__title']}>
+              Moved to Wellington, New Zealand
+            </div>
+            <div className={styles['timeline__event__description']}>
+              <p>Moved for a new adventure</p>
+            </div>
+          </div>
+        </Animated>
+
+        <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-2s', styles['timeline__event--type2'])} isVisible={inView}>
+          <div className={styles['timeline__event__icon']}>
+            <FontAwesomeIcon icon={faPersonChalkboard} className="fa-2x"/>
+          </div>
+          <div className={styles['timeline__event__date']}>
+            03-2020
+          </div>
+          <div className={styles['timeline__event__content']}>
+            <div className={styles['timeline__event__title']}>
+              Taught Javascript Development (part-time) course
+            </div>
+            <div className={styles['timeline__event__description']}>
+              <p>Mentor</p>
+            </div>
+          </div>
           </Animated>
-        }
 
-        { inView &&
-          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-2s', styles['timeline__event--type2'])}>
-            <div className={styles['timeline__event__icon']}>
-              <FontAwesomeIcon icon={faPersonChalkboard} className="fa-2x"/>
-            </div>
-            <div className={styles['timeline__event__date']}>
-              03-2020
-            </div>
-            <div className={styles['timeline__event__content']}>
-              <div className={styles['timeline__event__title']}>
-                Taught Javascript Development (part-time) course
-              </div>
-              <div className={styles['timeline__event__description']}>
-                <p>Mentor</p>
-              </div>
-            </div>
-          </Animated>
-        }
-
-        { inView &&
-          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-2s', styles['timeline__event--type3'])}>
+          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-2s', styles['timeline__event--type3'])} isVisible={inView}>
             <div className={styles['timeline__event__icon']}>
               <FontAwesomeIcon icon={faCode} className="fa-2x"/>
             </div>
@@ -80,11 +73,8 @@ export function Experience(props: ExperienceProps) {
 
             </div>
           </Animated>
-        }
 
-        { inView &&
-
-          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp', styles['timeline__event--type1'])}>
+          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp', styles['timeline__event--type1'])} isVisible={inView}>
             <div className={styles['timeline__event__icon']}>
               <FontAwesomeIcon icon={faCode} className="fa-2x"/>
             </div>
@@ -100,10 +90,8 @@ export function Experience(props: ExperienceProps) {
               </div>
             </div>
           </Animated>
-        }
 
-        { inView &&
-          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-2s', styles['timeline__event--type2'])}>
+          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-2s', styles['timeline__event--type2'])} isVisible={inView}>
             <div className={styles['timeline__event__icon']}>
               <FontAwesomeIcon icon={faPersonChalkboard} className="fa-2x"/>
             </div>
@@ -119,7 +107,6 @@ export function Experience(props: ExperienceProps) {
               </div>
             </div>
           </Animated>
-        }
 
       </div>
     </div>
