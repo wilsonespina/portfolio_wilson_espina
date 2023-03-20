@@ -47,6 +47,11 @@ a:visited { color: purple }
     text-transform: uppercase;
 }
 
+
+@mixin container-padding {
+    padding-inline: clamp(2rem, 6vw + 1rem, 10rem);
+}
+
 // @media screen and (min-width: 320px) {
 //     html {
 //       font-size: calc(16px + 6 * ((100vw - 320px) / 680));

@@ -1,13 +1,7 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+@import '../../styles.scss';
+
 .about {
+    @include container-padding;
     background-color: yellowgreen
-    // .heading {
-    //     text-transform: uppercase;
-    // }
+
 }
