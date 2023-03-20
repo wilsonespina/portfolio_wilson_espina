@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { faSquareJs, faNode, faReact, faAws, faJenkins, faCss3, faHtml5, faSass, faDocker } from '@fortawesome/free-brands-svg-icons'
-import Icon from  '../shared/icon/icon/icon';
+import Icon from  '../shared/icon/icon';
 
 import styles from './skills.module.scss';
 
