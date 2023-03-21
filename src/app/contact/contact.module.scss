@@ -3,3 +3,7 @@
 .contact {
     @include container-padding;
 }
+
+.icon {
+    font-size: clamp(2rem, 2vw + 1rem, 4rem);
+}

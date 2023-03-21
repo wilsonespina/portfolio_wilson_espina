@@ -9,11 +9,11 @@ export interface IconProps {
   iconClassName: string,
   animation: string,
   text: string,
-  customStyle?: string,
+  hoverAnimation?: boolean
 }
 
 
-export function Icon({ iconClassName, icon, animation, text, customStyle }: IconProps) {
+export function Icon({ iconClassName, icon, animation, text, hoverAnimation = false }: IconProps) {
 
   const [hover, setHover] = useState(false);
 
@@ -31,7 +31,7 @@ export function Icon({ iconClassName, icon, animation, text, customStyle }: Icon
         icon={icon}
         className={cn(iconClassName, {[animation]: hover})}
       />
-      <p className={cn(styles['text'], {[styles['show']]: hover})}>{text}</p>
+      <p className={cn(styles['text'], {[styles['show']]: hover && hoverAnimation})}>{text}</p>
     </div>
   );
 }

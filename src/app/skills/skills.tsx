@@ -1,6 +1,5 @@
 import cn from 'classnames';
 import { faSquareJs, faNode, faReact, faAws, faJenkins, faCss3, faHtml5, faSass, faDocker } from '@fortawesome/free-brands-svg-icons';
-// import { faSplat } from '@fortawesome/fontawesome-svg-core';
 import Icon from  '../shared/icon/icon';
 
 import styles from './skills.module.scss';
@@ -9,64 +8,72 @@ import styles from './skills.module.scss';
 export interface SkillsProps {}
 
 export function Skills(props: SkillsProps) {
-  const iconSize = 'fa-6x'
   return (
     <div className={cn(`${styles['skills']} container`)}>
       <h2 className="heading">Skills</h2>
       <div className={cn(`${styles['icon-list-container']}`)}>
         <Icon
           icon={faSquareJs}
-          iconClassName={`icon ${iconSize}`}
+          iconClassName={`${styles['icon']}`}
           animation="fa-bounce"
           text="JavaScript"
+          hoverAnimation
         />
         <Icon
           icon={faNode}
-          iconClassName={`icon ${iconSize}`}
+          iconClassName={`${styles['icon']}`}
           animation="fa-bounce"
           text="NodeJS"
+          hoverAnimation
         />
         <Icon
           icon={faReact}
-          iconClassName={`icon ${iconSize}`}
+          iconClassName={`${styles['icon']}`}
           animation="fa-bounce"
           text="ReactJS"
+          hoverAnimation
         />
         <Icon
           icon={faAws}
-          iconClassName={`icon ${iconSize}`}
+          iconClassName={`${styles['icon']}`}
           animation="fa-bounce"
           text="AWS"
+          hoverAnimation
         />
         <Icon
           icon={faJenkins}
-          iconClassName={`icon ${iconSize}`}
+          iconClassName={`${styles['icon']}`}
           animation="fa-bounce"
           text="Jenkins"
+          hoverAnimation
         />
         <Icon
           icon={faCss3}
-          iconClassName={`icon ${iconSize}`}
+          iconClassName={`${styles['icon']}`}
           animation="fa-bounce"
           text="CSS3"
+          hoverAnimation
         />
         <Icon
           icon={faHtml5}
-          iconClassName={`icon ${iconSize}`}
+          iconClassName={`${styles['icon']}`}
           animation="fa-bounce"
           text="HTML5"
+          hoverAnimation
         />
         <Icon
           icon={faSass}
-          iconClassName={`icon ${iconSize}`}
+          iconClassName={`${styles['icon']}`}
           animation="fa-bounce"
           text="SASS"
+          hoverAnimation
         />
         <Icon
           icon={faDocker}
-          iconClassName={`icon ${iconSize}`}
+          iconClassName={`${styles['icon']}`}
           animation="fa-bounce"
           text="Docker"
+          hoverAnimation
         />
       </div>
     </div>

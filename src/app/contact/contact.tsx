@@ -1,4 +1,7 @@
 import cn from 'classnames';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import Icon from  '../shared/icon/icon';
+
 import styles from './contact.module.scss';
 
 /* eslint-disable-next-line */
@@ -9,6 +12,14 @@ export function Contact(props: ContactProps) {
   return (
     <div className={cn(`${styles['contact']} container`)}>
       <h2 className={'heading'}>Contact</h2>
+      <section>
+        <Icon
+          icon={faTwitter}
+          iconClassName={`${styles['icon']}`}
+          animation="fa-bounce"
+          text="JavaScript"
+        />
+      </section>
       {/* <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
         <title>ts-logo-512</title>
         <g id="icomoon-ignore">
