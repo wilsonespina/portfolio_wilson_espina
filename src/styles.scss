@@ -38,7 +38,7 @@ a:visited { color: purple }
     display: flex;
 }
 
-.container {
+.section-container {
     width: 100%;
     margin-bottom: 8rem;
 }
@@ -63,3 +63,12 @@ a:visited { color: purple }
 //         font-size: 62.5%
 //     }
 // }
+
+
+/* COLORS */
+
+$pink: #ff48c4;
+$blue: #2bd1fc;
+$yellow: #f3ea5f;
+$purple: #c04df9;
+$red:#ff3f3f;

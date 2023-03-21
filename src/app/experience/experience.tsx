@@ -1,11 +1,21 @@
 import cn from 'classnames';
-import styles from './experience.module.scss';
-// import Animation from '../shared/animation/animation';
 import { useInView } from 'react-intersection-observer';
 import { Animated } from 'react-animated-css';
 
 import { faPlane, faPersonChalkboard, faCode } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon, } from '@fortawesome/react-fontawesome';
+// import * from './experience.module.scss';
+import styles from './experience.module.scss';
+
+const {
+  experience,
+  timeline,
+  content,
+  container,
+  left,
+  right,
+  date
+} = styles;
 
 /* eslint-disable-next-line */
 export interface ExperienceProps {}
@@ -14,99 +24,70 @@ export function Experience(props: ExperienceProps) {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
-  });
+  }); // TODO - move to ANIMATION component to be able to handle individual animations
+
+  // https://codepen.io/htmlcodex/pen/LYGjPgV
+  
 
   return (
-    <div className={cn(`${styles['experience']} container`)} ref={ref}>
-      <h2 className={'heading'}>Experience</h2>
+    <div className={cn(experience, 'section-container')} ref={ref}>
+      <h2 className="heading">Experience</h2>
 
-      <div className={styles['timeline']}>
-        <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-3s', styles['timeline__event--type1'])} isVisible={inView}>
-          <div className={styles['timeline__event__icon']}>
-            <FontAwesomeIcon icon={faPlane} className="fa-2x"/>
-
-          </div>
-          <div className={styles['timeline__event__date']}>
-            03-2023
-          </div>
-          <div className={styles['timeline__event__content']}>
-            <div className={styles['timeline__event__title']}>
-              Moved to Wellington, New Zealand
-            </div>
-            <div className={styles['timeline__event__description']}>
-              <p>Moved for a new adventure</p>
-            </div>
+      <div className={timeline}>
+        <Animated className={cn(container, left, 'animated fadeInUp')} isVisible={inView}>
+          <div className={date}>Mar 2023</div>
+          <FontAwesomeIcon icon={faPlane} className="fa-2x"/>
+          <div className={content}>
+            <h2>Moved to Wellington, New Zealand</h2>
+            <p>
+              Moved to New Zeland to start a new adventure with my family
+            </p>
           </div>
         </Animated>
 
-        <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-2s', styles['timeline__event--type2'])} isVisible={inView}>
-          <div className={styles['timeline__event__icon']}>
-            <FontAwesomeIcon icon={faPersonChalkboard} className="fa-2x"/>
+        <Animated className={cn(container, right, 'animated fadeInUp')} isVisible={inView}>
+          <div className={date}>Mar 2020</div>
+          <FontAwesomeIcon icon={faPersonChalkboard} className="fa-2x"/>
+          <div className={content}>
+            <h2>Taught Javascript Development (part-time) course</h2>
+            <p>
+              Mentored 100+ students???
+            </p>
           </div>
-          <div className={styles['timeline__event__date']}>
-            03-2020
+        </Animated>
+
+        <Animated className={cn(container, left, 'animated fadeInUp')} isVisible={inView}>
+          <div className={date}>Nov 2018</div>
+          <FontAwesomeIcon icon={faCode} className="fa-2x"/>
+          <div className={content}>
+            <h2>Joined ITV</h2>
+            <p>
+              Built CTV app, web app, ITVX Streaming service
+            </p>
           </div>
-          <div className={styles['timeline__event__content']}>
-            <div className={styles['timeline__event__title']}>
-              Taught Javascript Development (part-time) course
-            </div>
-            <div className={styles['timeline__event__description']}>
-              <p>Mentor</p>
-            </div>
+        </Animated>
+
+        <Animated className={cn(container, right, 'animated fadeInUp')} isVisible={inView}>
+          <div className={date}>Feb 2018</div>
+          <FontAwesomeIcon icon={faCode} className="fa-2x"/>
+          <div className={content}>
+            <h2>Joined Limejump</h2>
+            <p>
+              Startup in the energy sector
+            </p>
           </div>
-          </Animated>
+        </Animated>
 
-          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-2s', styles['timeline__event--type3'])} isVisible={inView}>
-            <div className={styles['timeline__event__icon']}>
-              <FontAwesomeIcon icon={faCode} className="fa-2x"/>
-            </div>
-            <div className={styles['timeline__event__date']}>
-              11-2018
-            </div>
-            <div className={styles['timeline__event__content']}>
-              <div className={styles['timeline__event__title']}>
-                Joined ITV
-              </div>
-              <div className={styles['timeline__event__description']}>
-                <p>CTV app</p>
-              </div>
-
-            </div>
-          </Animated>
-
-          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp', styles['timeline__event--type1'])} isVisible={inView}>
-            <div className={styles['timeline__event__icon']}>
-              <FontAwesomeIcon icon={faCode} className="fa-2x"/>
-            </div>
-            <div className={styles['timeline__event__date']}>
-              02-2018
-            </div>
-            <div className={styles['timeline__event__content']}>
-              <div className={styles['timeline__event__title']}>
-                Joined Limejump
-              </div>
-              <div className={styles['timeline__event__description']}>
-                <p>Startup in the energy sector</p>
-              </div>
-            </div>
-          </Animated>
-
-          <Animated className={cn(styles['timeline__event'], 'animated fadeInUp delay-2s', styles['timeline__event--type2'])} isVisible={inView}>
-            <div className={styles['timeline__event__icon']}>
-              <FontAwesomeIcon icon={faPersonChalkboard} className="fa-2x"/>
-            </div>
-            <div className={styles['timeline__event__date']}>
-              10-2017
-            </div>
-            <div className={styles['timeline__event__content']}>
-              <div className={styles['timeline__event__title']}>
-                CAREER CHANGE - Web Development Immersive course @General Assembly, London
-              </div>
-              <div className={styles['timeline__event__description']}>
-                <p>Mentor</p>
-              </div>
-            </div>
-          </Animated>
+        <Animated className={cn(container, left, 'animated fadeInUp')} isVisible={inView}>
+          <div className={date}>Oct 2017</div>
+          <FontAwesomeIcon icon={faPersonChalkboard} className="fa-2x"/>
+          <div className={content}>
+            <h2><span role="img" aria-label='Police siren emoji'>🚨</span>CAREER CHANGE<span role="img" aria-label='Police siren emoji'>🚨</span> - Web Development Immersive (WDI) @GA</h2>
+            <p>
+              Switched from Civil Engineering to a career in tech.
+            </p>
+          </div>
+        </Animated>
 
       </div>
     </div>

@@ -11,7 +11,7 @@ export interface InfoCardProps {
 
 export function InfoCard({ name, job }: InfoCardProps) {
   return (
-    <div className={cn(styles['info-card'], 'container')}>
+    <div className={cn(styles['info-card'], 'section-container')}>
       <div className={styles['info-container']}>
         <h1 className={styles['name']}>{name}</h1>
         <h2 className={styles['job']}>{job}</h2>

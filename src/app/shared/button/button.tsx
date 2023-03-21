@@ -5,7 +5,7 @@ export interface ButtonProps {}
 
 export function Button(props: ButtonProps) {
   return (
-    <div className={styles['container']}>
+    <div className={styles['section-container']}>
       <h1>Welcome to Button!</h1>
     </div>
   );
