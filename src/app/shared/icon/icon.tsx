@@ -8,7 +8,7 @@ export interface IconProps {
   icon: IconDefinition,
   iconClassName: string,
   animation: string,
-  text: string,
+  text?: string,
   hoverAnimation?: boolean
 }
 
@@ -31,7 +31,7 @@ export function Icon({ iconClassName, icon, animation, text, hoverAnimation = fa
         icon={icon}
         className={cn(iconClassName, {[animation]: hover})}
       />
-      <p className={cn(styles['text'], {[styles['show']]: hover && hoverAnimation})}>{text}</p>
+      {!!text && <p className={cn(styles['text'], {[styles['show']]: hover && hoverAnimation})}>{text}</p>}
     </div>
   );
 }

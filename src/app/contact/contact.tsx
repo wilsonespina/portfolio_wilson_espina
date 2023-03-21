@@ -1,8 +1,14 @@
 import cn from 'classnames';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Icon from  '../shared/icon/icon';
 
 import styles from './contact.module.scss';
+
+const {
+  contact,
+  icon,
+} = styles
 
 /* eslint-disable-next-line */
 export interface ContactProps {}
@@ -10,16 +16,40 @@ export interface ContactProps {}
 
 export function Contact(props: ContactProps) {
   return (
-    <div className={cn(`${styles['contact']} container`)}>
+    <div className={cn(contact, 'section-container')}>
       <h2 className={'heading'}>Contact</h2>
-      <section>
-        <Icon
-          icon={faTwitter}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="JavaScript"
-        />
-      </section>
+      <ul className={styles['icon-list']}>
+        <li>
+          <a href="https://twitter.com/wilson_espina" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <Icon
+              icon={faTwitter}
+              iconClassName={icon}
+              animation="fa-bounce"
+            />
+          </a>
+        </li>
+        <li>
+          <Icon
+            icon={faEnvelope}
+            iconClassName={icon}
+            animation="fa-bounce"
+          />
+        </li>
+        <li>
+          <Icon
+            icon={faGithub}
+            iconClassName={icon}
+            animation="fa-bounce"
+          />
+        </li>
+        <li>
+          <Icon
+            icon={faLinkedin}
+            iconClassName={icon}
+            animation="fa-bounce"
+          />
+        </li>
+      </ul>
       {/* <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
         <title>ts-logo-512</title>
         <g id="icomoon-ignore">

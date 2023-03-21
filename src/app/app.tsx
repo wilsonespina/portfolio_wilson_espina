@@ -17,9 +17,9 @@ export function App() {
       <main className={styles['container']}>
         <InfoCard name="Wilson Espina" job="Frontend Software Engineer"/>
         <About />
+        <Skills />
         {/* <Experience2 /> */}
         <Experience />
-        <Skills />
         <Contact />
       </main>
     </>
