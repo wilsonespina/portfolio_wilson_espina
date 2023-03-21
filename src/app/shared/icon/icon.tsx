@@ -31,7 +31,7 @@ export function Icon({ iconClassName, icon, animation, text, hoverAnimation = fa
         icon={icon}
         className={cn(iconClassName, {[animation]: hover})}
       />
-      {!!text && <p className={cn(styles['text'], {[styles['show']]: hover && hoverAnimation})}>{text}</p>}
+      {!!text && <p>{text}</p>}
     </div>
   );
 }

@@ -32,6 +32,13 @@ ol, ul { padding-left: 2em }
 // a:active { color: red }
 // a:visited { color: purple }
 
+a,
+a:visited,
+a:hover
+a:active {
+    color: inherit;
+}
+
 
 /******** GLOBAL STYLES *********/
 .flex-container {
