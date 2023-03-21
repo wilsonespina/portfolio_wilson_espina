@@ -6,6 +6,7 @@ import { faPlane, faPersonChalkboard, faCode } from '@fortawesome/free-solid-svg
 import { FontAwesomeIcon, } from '@fortawesome/react-fontawesome';
 // import * from './experience.module.scss';
 import styles from './experience.module.scss';
+import { PropsWithChildren } from 'react';
 
 const {
   experience,
@@ -18,7 +19,7 @@ const {
 } = styles;
 
 /* eslint-disable-next-line */
-export interface ExperienceProps {}
+export interface ExperienceProps extends PropsWithChildren{}
 
 export function Experience(props: ExperienceProps) {
   const { ref, inView, entry } = useInView({

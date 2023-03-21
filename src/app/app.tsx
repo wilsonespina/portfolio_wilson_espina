@@ -14,7 +14,7 @@ export function App() {
 
     {/* <SplashScreen /> */}
 
-      <main className={styles['section-container']}>
+      <main className={styles['container']}>
         <InfoCard name="Wilson Espina" job="Frontend Software Engineer"/>
         <About />
         {/* <Experience2 /> */}
