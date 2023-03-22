@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+
+.page {
+    background-color: pink;
+    height: 100svh;
+    width: 100svw;
+    padding: clamp(1rem, 2vw + 1rem, 3rem);
+
+    .frame {
+        border: 1px solid black;
+        height: 100%;
+        width: 100%;
+        padding: $page-padding;
+    }
+
+    .nav {
+        padding-block: $page-padding;
+        z-index: 2;
+        position: relative;
+
+        ul {
+            padding-inline: 0;
+            a {
+                font-size: clamp(0.5rem, 1vw + 0.5rem, 3rem);
+                text-decoration: none;
+            }
+        }
+    }
+}

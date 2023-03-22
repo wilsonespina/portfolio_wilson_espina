@@ -1,3 +1,7 @@
+@import './canvas';
+@import './colors';
+@import './variables';
+
 * {
     margin: 0;
     padding: 0;
@@ -23,14 +27,6 @@ h4, li, label, input, textarea, select, p {
 h5 { font-size: 1.6rem }
 h6 { font-size: 1.4rem }
 ol, ul { padding-left: 2em }
-// a {
-//     text-decoration: underline;
-//     color: blue;
-// }
-// a:hover { color: pink }
-// a:focus { color: orange }
-// a:active { color: red }
-// a:visited { color: purple }
 
 a,
 a:visited,
@@ -59,23 +55,3 @@ a:active {
     padding-inline: clamp(2rem, 6vw + 1rem, 10rem);
 }
 
-// @media screen and (min-width: 320px) {
-//     html {
-//       font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-//     }
-// }
-
-// @media screen and (min-width: 1000px) {
-//     html {
-//         font-size: 62.5%
-//     }
-// }
-
-
-/* COLORS */
-
-$pink: #ff48c4;
-$blue: #2bd1fc;
-$yellow: #f3ea5f;
-$purple: #c04df9;
-$red:#ff3f3f;

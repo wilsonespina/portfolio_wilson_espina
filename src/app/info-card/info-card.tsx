@@ -2,24 +2,23 @@ import cn from 'classnames';
 import wilsonIceCreamImage from '../../assets/wilson_ice_cream.png';
 
 import styles from './info-card.module.scss';
+const {
+  name,
+  job
+} = styles;
 
 /* eslint-disable-next-line */
 export interface InfoCardProps {
-  name: string,
-  job: string
+  fullName: string,
+  jobTitle: string
 }
 
-export function InfoCard({ name, job }: InfoCardProps) {
+export function InfoCard({ fullName, jobTitle }: InfoCardProps) {
   return (
-    <div className={cn(styles['info-card'], 'section-container')}>
       <div className={styles['info-container']}>
-        <h1 className={styles['name']}>{name}</h1>
-        <h2 className={styles['job']}>{job}</h2>
+        <h1 className={name}>{fullName}</h1>
+        <p className={job}>{jobTitle}</p>
       </div>
-      <div className={styles['image-container']}>
-        <img src={wilsonIceCreamImage} alt="profile_picture" className={styles['image']}/>
-      </div>
-    </div>
   );
 }
 

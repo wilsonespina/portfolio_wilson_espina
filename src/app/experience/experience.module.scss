@@ -1,19 +1,5 @@
-// html {
-//   font-size: 14px;
-// }
-// body {
-//   background: #f6f9fc;
-//   font-family: "Open Sans", sans-serif;
-//   color: #525f7f;
-// }
-// h2{
-//   margin: 5%;
-//   text-align: center;
-//   font-size: 2rem;
-//   font-weight: 100;
-// }
-
-@import '../../styles.scss';
+@import '../../styles/styles.scss';
+@import '../../styles/colors.scss';
 
 .experience {
     @include container-padding;

@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import '../../styles/styles.scss';
 
 .contact {
     @include container-padding;
@@ -11,10 +11,6 @@
     justify-content: center;
     gap: clamp(1rem, 2vw + 1rem, 4rem);
     list-style-type: none;
-
-    // li {
-    //     text-decoration: none;
-    // }
 
     .icon {
         font-size: clamp(2rem, 2vw + 1rem, 4rem);
