@@ -15,10 +15,16 @@ export default function canvasAnimation() {
     // avoid nodes spreading
     const ANCHOR_LENGTH = 20;
     // highlight radius
-    const MOUSE_RADIUS = 300;
+    const MOUSE_RADIUS = 250;
   
     const circ = 2 * Math.PI;
     nodes = [];
+
+    const R = '102';
+    const G = '0';
+    const B = '204';
+    
+    const LINE_COLOR_RGB = `rgba(${R}, ${G}, ${B}, `;
   
     const canvas = document.querySelector('canvas');
 
@@ -48,7 +54,7 @@ export default function canvasAnimation() {
     }
   
     Node.prototype.drawNode = function() {
-      const color = "rgba(255, 0, 0, " + this.brightness + ")";
+      const color = LINE_COLOR_RGB + this.brightness + ")";
       ctx.beginPath();
       ctx.arc(this.x, this.y, 2 * this.radius + 2 * this.siblings.length / SIBLINGS_LIMIT, 0, circ);
       ctx.fillStyle = color;
@@ -57,7 +63,7 @@ export default function canvasAnimation() {
   
     Node.prototype.drawConnections = function() {
       for (let i = 0; i < this.siblings.length; i++) {
-        const color = "rgba(255, 0, 0, " + this.brightness + ")";
+        const color = LINE_COLOR_RGB + this.brightness + ")";
         ctx.beginPath();
         ctx.moveTo(this.x, this.y);
         ctx.lineTo(this.siblings[i].x, this.siblings[i].y);
@@ -100,11 +106,11 @@ export default function canvasAnimation() {
         }
       }
     }
-  
+
     function calcDistance(node1, node2) {
       return Math.sqrt(Math.pow(node1.x - node2.x, 2) + (Math.pow(node1.y - node2.y, 2)));
     }
-  
+
     function findSiblings() {
       let node1, node2, distance;
       for (let i = 0; i < NODES_QTY; i++) {
@@ -138,7 +144,7 @@ export default function canvasAnimation() {
         }
       }
     }
-  
+
     function redrawScene() {
       resizeWindow();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -166,24 +172,24 @@ export default function canvasAnimation() {
       }
       requestAnimationFrame(redrawScene);
     }
-  
+
     function initHandlers() {
       document.addEventListener('resize', resizeWindow, false);
       canvas.addEventListener('mousemove', mousemoveHandler, false);
     }
-  
+
     function resizeWindow() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
-  
+
     function mousemoveHandler(e) {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     }
-  
+
     initHandlers();
     initNodes();
     redrawScene();
-  
+
   };

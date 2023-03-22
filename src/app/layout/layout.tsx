@@ -42,9 +42,6 @@ export function Layout({children}: LayoutProps) {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-            {/* <li>
-              <Link to="/nothing-here">Nothing Here</Link>
-            </li> */}
           </ul>
         </nav>
         <canvas></canvas>

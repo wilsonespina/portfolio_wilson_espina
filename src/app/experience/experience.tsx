@@ -1,10 +1,7 @@
 import cn from 'classnames';
-import { useInView } from 'react-intersection-observer';
 import { Animated } from 'react-animated-css';
-
 import { faPlane, faPersonChalkboard, faCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon, } from '@fortawesome/react-fontawesome';
-// import * from './experience.module.scss';
 import styles from './experience.module.scss';
 import { PropsWithChildren } from 'react';
 
@@ -22,19 +19,15 @@ const {
 export interface ExperienceProps extends PropsWithChildren{}
 
 export function Experience(props: ExperienceProps) {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0,
-  }); // TODO - move to ANIMATION component to be able to handle individual animations
 
   // https://codepen.io/htmlcodex/pen/LYGjPgV
-  
+
 
   return (
-    <div className={cn(experience, 'section-container')} ref={ref}>
+    <div className={cn(experience, 'section-container')}>
 
       <div className={timeline}>
-        <Animated className={cn(container, left, 'animated fadeInUp')} isVisible={inView}>
+        <Animated className={cn(container, left, 'animated fadeInUp')}>
           <div className={date}>Mar 2023</div>
           <FontAwesomeIcon icon={faPlane} className="fa-2x"/>
           <div className={content}>
@@ -45,7 +38,7 @@ export function Experience(props: ExperienceProps) {
           </div>
         </Animated>
 
-        <Animated className={cn(container, right, 'animated fadeInUp')} isVisible={inView}>
+        <Animated className={cn(container, right, 'animated fadeInUp')}>
           <div className={date}>Mar 2020</div>
           <FontAwesomeIcon icon={faPersonChalkboard} className="fa-2x"/>
           <div className={content}>
@@ -56,7 +49,7 @@ export function Experience(props: ExperienceProps) {
           </div>
         </Animated>
 
-        <Animated className={cn(container, left, 'animated fadeInUp')} isVisible={inView}>
+        <Animated className={cn(container, left, 'animated fadeInUp')}>
           <div className={date}>Nov 2018</div>
           <FontAwesomeIcon icon={faCode} className="fa-2x"/>
           <div className={content}>
@@ -67,7 +60,7 @@ export function Experience(props: ExperienceProps) {
           </div>
         </Animated>
 
-        <Animated className={cn(container, right, 'animated fadeInUp')} isVisible={inView}>
+        <Animated className={cn(container, right, 'animated fadeInUp')}>
           <div className={date}>Feb 2018</div>
           <FontAwesomeIcon icon={faCode} className="fa-2x"/>
           <div className={content}>
@@ -78,7 +71,7 @@ export function Experience(props: ExperienceProps) {
           </div>
         </Animated>
 
-        <Animated className={cn(container, left, 'animated fadeInUp')} isVisible={inView}>
+        <Animated className={cn(container, left, 'animated fadeInUp')}>
           <div className={date}>Oct 2017</div>
           <FontAwesomeIcon icon={faPersonChalkboard} className="fa-2x"/>
           <div className={content}>

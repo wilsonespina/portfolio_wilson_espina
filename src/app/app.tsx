@@ -30,16 +30,6 @@ export function App() {
       </Route>
 
     </Routes>
-
-
-      {/* <main className={styles['container']}> */}
-        {/* <InfoCard name="Wilson Espina" job="Frontend Software Engineer"/> */}
-        {/* <About /> */}
-        {/* <Skills /> */}
-        {/* <Experience2 /> */}
-        {/* <Experience /> */}
-        {/* <Contact /> */}
-      {/* </main> */}
     </>
   );
 }
