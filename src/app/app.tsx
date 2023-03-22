@@ -9,6 +9,12 @@ import Contact from './contact/contact';
 import Layout from './layout/layout';
 import styles from './app.module.scss';
 
+function NoMatch() {
+  return (
+    <div>Not a correct route</div>
+  )
+}
+
 export function App() {
   return (
     <>
@@ -17,15 +23,11 @@ export function App() {
 
     <Routes>
       <Route path="/" element={<Layout />}>
-        {/* <Route index element={<Home />} /> */}
-        {/* <Route path="about" element={<About />} /> */}
-        {/* <Route path="dashboard" element={<Dashboard />} /> */}
-
-        {/* Using path="*"" means "match anything", so this route
-              acts like a catch-all for URLs that we don't have explicit
-              routes for. */}
-        {/* <Route path="*" element={<NoMatch />} /> */}
-
+        <Route index element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NoMatch />} />
       </Route>
 
     </Routes>

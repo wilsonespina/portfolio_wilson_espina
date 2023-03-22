@@ -120,7 +120,7 @@ export default function canvasAnimation() {
               } else {
                 let node_sibling_distance = 0;
                 let max_distance = 0;
-                var s;
+                let s;
                 for (let k = 0; k < SIBLINGS_LIMIT; k++) {
                   node_sibling_distance = calcDistance(node1, node1.siblings[k]);
                   if (node_sibling_distance > max_distance) {

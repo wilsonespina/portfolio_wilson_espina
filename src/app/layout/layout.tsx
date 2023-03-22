@@ -15,7 +15,7 @@ const {
 /* eslint-disable-next-line */
 export interface LayoutProps extends PropsWithChildren {}
 
-export function Layout(props: LayoutProps) {
+export function Layout({children}: LayoutProps) {
 
   useEffect(() => {
     canvasAnimation();
@@ -25,7 +25,7 @@ export function Layout(props: LayoutProps) {
   return (
     <main className={page}>
       <div className={frame}>
-      
+
       <header>
         <InfoCard fullName="Wilson Espina" jobTitle="Frontend Software Engineer"/>
         <nav className={nav}>
@@ -33,8 +33,11 @@ export function Layout(props: LayoutProps) {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/about">About</Link>
+            </li> */}
+            <li>
+              <Link to="/skills">Skills</Link>
             </li>
             <li>
               <Link to="/experience">Experience</Link>
@@ -47,7 +50,9 @@ export function Layout(props: LayoutProps) {
             </li> */}
           </ul>
         </nav>
+        { children }
         <canvas></canvas>
+        <Outlet />
       </header>
       </div>
     </main>
