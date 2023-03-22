@@ -1,7 +1,16 @@
 @import '../../styles/styles.scss';
 
 .about {
-    @include container-padding;
-    background-color: yellowgreen
+    // @include container-padding;
+    // background-color: yellowgreen;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: end;
 
+    .text {
+        font-size: $text-font-size;
+        max-width: 20rem;
+        line-height: 2;
+    }
 }

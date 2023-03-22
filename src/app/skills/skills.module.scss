@@ -3,16 +3,17 @@
 .skills {
     @include container-padding;
 }
+
 .icon-list-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: clamp(0.5rem, 2vw + 1rem, 4rem);
-
-
-
+    height: 40svh;
+    z-index: 2;
 }
 
 .icon {
-    font-size: clamp(5rem, 6vw + 1rem, 9rem);
+    font-size: clamp(2rem, 3vw + 1rem, 7rem);
 }

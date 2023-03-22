@@ -1,17 +1,25 @@
 import cn from 'classnames';
 import { faSquareJs, faNode, faReact, faAws, faJenkins, faCss3, faHtml5, faSass, faDocker } from '@fortawesome/free-brands-svg-icons';
+import { Animated } from 'react-animated-css';
 import Icon from  '../shared/icon/icon';
 
 import styles from './skills.module.scss';
+import { PropsWithChildren } from 'react';
+
+const {
+  skills
+} = styles;
 
 /* eslint-disable-next-line */
-export interface SkillsProps {}
+export interface SkillsProps extends PropsWithChildren{}
 
 export function Skills(props: SkillsProps) {
   return (
-    <div className={cn(`${styles['skills']} container`)}>
-      <h2 className="heading">Skills</h2>
-      <div className={cn(`${styles['icon-list-container']}`)}>
+    <div className={skills}>
+      <Animated
+        className={cn(`${styles['icon-list-container']}`)}
+        animationIn="fadeIn"
+        animationInDuration={2000}>
         <Icon
           icon={faSquareJs}
           iconClassName={`${styles['icon']}`}
@@ -75,7 +83,7 @@ export function Skills(props: SkillsProps) {
           text="Docker"
           hoverAnimation
         />
-      </div>
+      </Animated>
     </div>
   );
 }
