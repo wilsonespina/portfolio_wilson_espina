@@ -17,7 +17,6 @@ export interface ContactProps {}
 export function Contact(props: ContactProps) {
   return (
     <div className={cn(contact, 'section-container')}>
-      <h2 className={'heading'}>Contact</h2>
       <ul className={styles['icon-list']}>
         <li>
           <a href="https://twitter.com/wilson_espina" target="_blank" rel="noopener noreferrer" aria-label="Twitter">

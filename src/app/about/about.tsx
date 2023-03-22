@@ -15,7 +15,7 @@ export function About(props: AboutProps) {
     <div className={about}>
       <Animated
         className={cn(`${styles['icon-list-container']}`)}
-        animationIn="fadeInRight"
+        animationIn="fadeIn"
         animationInDuration={1000}>
         <p className={text}>
           Born in London and currently based in Wellington, New Zealand. I'm an experienced Frontend Software Engineer specialising in making beautiful web pages.

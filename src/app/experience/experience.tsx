@@ -32,7 +32,6 @@ export function Experience(props: ExperienceProps) {
 
   return (
     <div className={cn(experience, 'section-container')} ref={ref}>
-      <h2 className="heading">Experience</h2>
 
       <div className={timeline}>
         <Animated className={cn(container, left, 'animated fadeInUp')} isVisible={inView}>
