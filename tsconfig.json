@@ -20,9 +20,7 @@
     "strict": true,
     "types": ["vite/client", "vitest"]
   },
-  "files": [
-    "src/types/types.d.ts"
-  ],
+  "files": [],
   "include": [],
   "references": [
     {

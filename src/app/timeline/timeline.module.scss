@@ -26,7 +26,7 @@
 
     h1 {
         font-size: 2rem;
-        font-family: sans-serif;
+        // font-family: sans-serif;
     }
 
     .wrapper{
@@ -64,7 +64,7 @@
             }
             .time{
                 color: #2a2839;
-                font-family: 'Poppins', sans-serif;
+                // font-family: 'Poppins', sans-serif;
                 font-weight: 500;
                 @include mobile-and-up{
                     font-size: 1.1rem;
@@ -79,7 +79,7 @@
             }
             .text {
                 color: #4f4f4f;
-                font-family: sans-serif;
+                // font-family: sans-serif;
                 line-height: 1.5;
                 margin-top:0.4rem;
                 @include mobile-only{

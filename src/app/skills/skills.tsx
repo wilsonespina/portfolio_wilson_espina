@@ -19,7 +19,9 @@ export function Skills(props: SkillsProps) {
       <Animated
         className={cn(`${styles['icon-list-container']}`)}
         animationIn="fadeIn"
-        animationInDuration={2000}>
+        animationInDuration={2000}
+        animationOut="fadeOut"
+        isVisible={true}>
         <Icon
           icon={faSquareJs}
           iconClassName={`${styles['icon']}`}

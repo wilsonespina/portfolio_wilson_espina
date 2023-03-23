@@ -17,7 +17,12 @@ export interface TimelineProps {}
 
 export function Timeline(props: TimelineProps) {
   return (
-    <Animated className={cn(container, 'animated fadeIn')}>
+    <Animated
+      className={cn(container, 'animated fadeIn')}
+      animationIn="fadeIn"
+      animationInDuration={2000}
+      animationOut="fadeOut"
+      isVisible={true}>
       <div className={wrapper}>
         <h1>Work Timeline</h1>
         <ul className={sessions}>

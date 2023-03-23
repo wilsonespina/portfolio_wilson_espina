@@ -16,7 +16,12 @@ export interface ContactProps {}
 
 export function Contact(props: ContactProps) {
   return (
-    <Animated className={cn(contact, 'fadeIn')}>
+    <Animated
+      className={cn(contact, 'fadeIn')}
+      animationIn="fadeIn"
+      animationInDuration={2000}
+      animationOut="fadeOut"
+      isVisible={true}>
       <ul className={styles['icon-list']}>
         <li>
           <a href="https://twitter.com/wilson_espina" target="_blank" rel="noopener noreferrer" aria-label="Twitter">

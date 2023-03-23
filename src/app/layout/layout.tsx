@@ -27,7 +27,7 @@ export function Layout({children}: LayoutProps) {
       <div className={frame}>
 
       <header>
-        <InfoCard fullName="Wilson Espina" jobTitle="Frontend Software Engineer"/>
+        <InfoCard fullName="Wilson Espina" jobTitle="Software Engineer"/>
         <nav className={nav}>
           <ul>
             <li>
