@@ -4,6 +4,9 @@ import cn from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
+const {
+  label
+} = styles;
 export interface IconProps {
   icon: IconDefinition,
   iconClassName: string,
@@ -13,7 +16,7 @@ export interface IconProps {
 }
 
 
-export function Icon({ iconClassName, icon, animation, text, hoverAnimation = false }: IconProps) {
+export function Icon({ iconClassName, icon, animation, text }: IconProps) {
 
   const [hover, setHover] = useState(false);
 
@@ -31,7 +34,7 @@ export function Icon({ iconClassName, icon, animation, text, hoverAnimation = fa
         icon={icon}
         className={cn(iconClassName, {[animation]: hover})}
       />
-      {!!text && <p>{text}</p>}
+      {!!text && <p className={label}>{text}</p>}
     </div>
   );
 }

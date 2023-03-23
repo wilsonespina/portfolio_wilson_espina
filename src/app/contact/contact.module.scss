@@ -1,10 +1,14 @@
 @import '../../styles/styles.scss';
 
 .contact {
-    @include container-padding;
+    // @include container-padding;
+    height: 100%;
+    width: 100%;
 }
 
 .icon-list {
+    height: 100%;
+    width: 100%;
     position: relative;
     z-index: 2;
     display: flex;

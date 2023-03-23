@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { Animated } from 'react-animated-css';
 import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Icon from  '../shared/icon/icon';
@@ -15,7 +16,7 @@ export interface ContactProps {}
 
 export function Contact(props: ContactProps) {
   return (
-    <div className={cn(contact, 'section-container')}>
+    <Animated className={cn(contact, 'fadeIn')}>
       <ul className={styles['icon-list']}>
         <li>
           <a href="https://twitter.com/wilson_espina" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
@@ -23,32 +24,42 @@ export function Contact(props: ContactProps) {
               icon={faTwitter}
               iconClassName={icon}
               animation="fa-bounce"
+              text="Twitter"
             />
           </a>
         </li>
         <li>
-          <Icon
-            icon={faEnvelope}
-            iconClassName={icon}
-            animation="fa-bounce"
-          />
+          <a href="mailto:wilson.espina@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+            <Icon
+              icon={faEnvelope}
+              iconClassName={icon}
+              animation="fa-bounce"
+              text="Email"
+            />
+          </a>
         </li>
         <li>
-          <Icon
-            icon={faGithub}
-            iconClassName={icon}
-            animation="fa-bounce"
-          />
+          <a href="https://github.com/wilsonespina" target="_blank" rel="noopener noreferrer" aria-label="Github">
+            <Icon
+              icon={faGithub}
+              iconClassName={icon}
+              animation="fa-bounce"
+              text="Github"
+            />
+          </a>
         </li>
         <li>
-          <Icon
-            icon={faLinkedin}
-            iconClassName={icon}
-            animation="fa-bounce"
-          />
+          <a href="https://www.linkedin.com/in/wilson-espina/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Icon
+              icon={faLinkedin}
+              iconClassName={icon}
+              animation="fa-bounce"
+              text="LinkedIn"
+            />
+          </a>
         </li>
       </ul>
-    </div>
+    </Animated>
   );
 }
 
