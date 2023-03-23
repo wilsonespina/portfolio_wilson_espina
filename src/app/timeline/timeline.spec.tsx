@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Experience2 from './experience2';
+import Timeline from './timeline';
 
-describe('Experience2', () => {
+describe('Timeline', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Experience2 />);
+    const { baseElement } = render(<Timeline />);
     expect(baseElement).toBeTruthy();
   });
 });

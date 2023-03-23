@@ -33,7 +33,7 @@ export function Experience(props: ExperienceProps) {
           <div className={content}>
             <h2>Moved to Wellington, New Zealand</h2>
             <p>
-              Moved to New Zeland to start a new adventure with my family
+              Moved to New Zealand to start a new adventure with my family
             </p>
           </div>
         </Animated>
