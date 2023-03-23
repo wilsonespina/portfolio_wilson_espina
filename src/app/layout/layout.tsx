@@ -1,4 +1,4 @@
-import { PropsWithChildren, useEffect } from 'react';
+import { PropsWithChildren, useEffect, useState } from 'react';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 import InfoCard from '../info-card/info-card';
@@ -9,6 +9,7 @@ import styles from './layout.module.scss';
 const {
   page,
   frame,
+  header,
   nav
 } = styles;
 
@@ -17,36 +18,37 @@ export interface LayoutProps extends PropsWithChildren {}
 
 export function Layout({children}: LayoutProps) {
 
+  const [animation, setAnimation] = useState();
+  
   useEffect(() => {
     canvasAnimation();
   }, [])
-
 
   return (
     <main className={page}>
       <div className={frame}>
 
-      <header>
-        <InfoCard fullName="Wilson Espina" jobTitle="Software Engineer"/>
-        <nav className={nav}>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/skills">Skills</Link>
-            </li>
-            <li>
-              <Link to="/experience">Experience</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
+        <header className={header}>
+          <InfoCard fullName="Wilson Espina" jobTitle="Software Engineer"/>
+          <nav className={nav}>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/skills">Skills</Link>
+              </li>
+              <li>
+                <Link to="/experience">Experience</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <Outlet />
         <canvas></canvas>
-      </header>
-      <Outlet />
       </div>
     </main>
   );

@@ -183,7 +183,7 @@ export default function canvasAnimation() {
       canvas.height = window.innerHeight;
     }
 
-    function mousemoveHandler(e) {
+    function mousemoveHandler(e: Event) {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     }
@@ -191,5 +191,4 @@ export default function canvasAnimation() {
     initHandlers();
     initNodes();
     redrawScene();
-
   };

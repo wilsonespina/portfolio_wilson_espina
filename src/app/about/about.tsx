@@ -4,6 +4,7 @@ import styles from './about.module.scss';
 
 const {
   about,
+  container,
   text
 } = styles;
 
@@ -12,16 +13,16 @@ export interface AboutProps {}
 
 export function About(props: AboutProps) {
   return (
-    <div className={about}>
       <Animated
-        className={cn(`${styles['icon-list-container']}`)}
+        className={about}
         animationIn="fadeIn"
         animationInDuration={1000}>
-        <p className={text}>
-          Born in London and currently based in Wellington, New Zealand. I'm an experienced Frontend Software Engineer specialising in making beautiful web pages.
-        </p>
+        <div className={container}>
+          <p className={text}>
+            Born in London and currently based in Wellington, New Zealand. I'm an experienced Frontend Software Engineer specialising in making beautiful web pages.
+          </p>
+        </div>
       </Animated>
-    </div>
   );
 }
 

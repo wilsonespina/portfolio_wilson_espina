@@ -1,14 +1,22 @@
-@import '../../styles/styles.scss';
+@import '../../styles/variables.scss';
 
 .about {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     height: 100%;
     align-items: end;
 
-    .text {
-        font-size: $text-font-size;
-        max-width: 20rem;
-        line-height: 2;
+    .container {
+        position: relative;
+        z-index: 2;
+        max-width: fit-content;
+
+        .text {
+            background-color: rgba($background-color, $text-background-opacity);
+            font-size: $text-font-size;
+            max-width: 20rem;
+            line-height: 2;
+        }
     }
 }

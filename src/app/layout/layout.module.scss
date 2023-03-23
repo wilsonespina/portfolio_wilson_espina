@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .page {
-    background-color: pink;
+    background-color: $background-color;
     height: 100svh;
     width: 100svw;
     padding: clamp(1rem, 2vw + 1rem, 3rem);
@@ -13,18 +13,33 @@
         padding: $page-padding;
         display: flex;
         flex-direction: column;
-    }
 
-    .nav {
-        padding-block: $page-padding;
-        z-index: 2;
-        position: relative;
+        .header {
+            position: relative;
+            z-index: 2;
+            max-width: clamp(9rem, 40vw + 1rem, 20rem);
 
-        ul {
-            padding-inline: 0;
-            a {
-                font-size: clamp(1.5rem, 1vw + 0.5rem, 3rem);
-                text-decoration: none;
+            .nav {
+                background-color: rgba($background-color, $text-background-opacity); // TODO - change with new background color
+                // -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+                //     from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+                // padding-block: $page-padding;
+                z-index: 2;
+                position: relative;
+                max-width: fit-content;
+                padding-block: 1em;
+                padding-inline-end: 3em;
+
+                ul {
+                    padding-inline: 0;
+                    line-height: 1.6;
+
+                    a {
+                        font-size: clamp(1.5rem, 1vw + 0.5rem, 3rem);
+                        text-decoration: none;
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
