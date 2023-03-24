@@ -16,7 +16,7 @@
 
         .text {
             background-color: rgba($background-color, $text-background-opacity);
-            font-size: $text-font-size;
+            font-size: $text-font-size-large;
             max-width: 20rem;
             line-height: 2;
         }

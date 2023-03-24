@@ -10,7 +10,8 @@ const {
   page,
   frame,
   header,
-  nav
+  nav,
+  active
 } = styles;
 
 /* eslint-disable-next-line */
@@ -31,22 +32,22 @@ export function Layout(props: LayoutProps) {
             <ul>
               <li>
                 <NavLink to="/" className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "active" : ""
+                  isPending ? "pending" : isActive ? active : ""
                 }>Home</NavLink>
               </li>
               <li>
                 <NavLink to="/skills" className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "active" : ""
+                  isPending ? "pending" : isActive ? active : ""
                 }>Skills</NavLink>
               </li>
               <li>
                 <NavLink to="/experience" className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "active" : ""
+                  isPending ? "pending" : isActive ? active : ""
                 }>Experience</NavLink>
               </li>
               <li>
                 <NavLink to="/contact" className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "active" : ""
+                  isPending ? "pending" : isActive ? active : ""
                 }>Contact</NavLink>
               </li>
             </ul>
