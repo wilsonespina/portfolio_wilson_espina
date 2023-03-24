@@ -1,17 +1,28 @@
 @import '../../styles/styles.scss';
 
 .skills {
-    @include container-padding;
+    // @include container-padding;
+    z-index: 2;
+    // display: flex;
+    // justify-content: flex-end;
+    // flex-direction: column;
 }
 
 .icon-list-container {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-around;
+    // flex-wrap: wrap;
+    // gap: clamp(0.5rem, 2vw + 1rem, 4rem);
+    // height: 40svh;
+    // z-index: 2;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-items: end;
     flex-wrap: wrap;
     gap: clamp(0.5rem, 2vw + 1rem, 4rem);
-    height: 40svh;
-    z-index: 2;
+    max-height: 40%;
 }
 
 .icon {
