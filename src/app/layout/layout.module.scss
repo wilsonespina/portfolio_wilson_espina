@@ -34,10 +34,12 @@
                     line-height: 1.6;
 
                     li {
-                        
                         &:hover {
                             transform: scale(1.05);
+                            transition: transform 0.1s linear;
+                            // animation-name: grow;
                             color: rgba($font-color, 0.6);
+                            animation-duration: 0.5s;
                         }
                         a {
                             font-size: clamp(2rem, 1vw + 0.5rem, 3rem);
