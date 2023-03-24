@@ -1,8 +1,8 @@
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
+
 import SplashScreen from './splash-screen/splash-screen';
 import About from './about/about';
 import Skills from './skills/skills';
-import Experience from './experience/experience';
 import Timeline from './timeline/timeline';
 import Contact from './contact/contact';
 import Layout from './layout/layout';
@@ -14,10 +14,10 @@ function NoMatch() {
   )
 }
 
+
 export function App() {
   return (
     <>
-
     {/* <SplashScreen /> */}
 
     <Routes>
@@ -28,8 +28,8 @@ export function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
-
     </Routes>
+
     </>
   );
 }

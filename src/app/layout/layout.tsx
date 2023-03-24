@@ -1,5 +1,5 @@
 import { PropsWithChildren, useEffect, useState } from 'react';
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 import InfoCard from '../info-card/info-card';
 
@@ -16,10 +16,7 @@ const {
 /* eslint-disable-next-line */
 export interface LayoutProps extends PropsWithChildren {}
 
-export function Layout({children}: LayoutProps) {
-
-  const [animation, setAnimation] = useState();
-  
+export function Layout(props: LayoutProps) {
   useEffect(() => {
     canvasAnimation();
   }, [])
@@ -33,16 +30,24 @@ export function Layout({children}: LayoutProps) {
           <nav className={nav}>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink to="/" className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }>Home</NavLink>
               </li>
               <li>
-                <Link to="/skills">Skills</Link>
+                <NavLink to="/skills" className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }>Skills</NavLink>
               </li>
               <li>
-                <Link to="/experience">Experience</Link>
+                <NavLink to="/experience" className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }>Experience</NavLink>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <NavLink to="/contact" className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }>Contact</NavLink>
               </li>
             </ul>
           </nav>

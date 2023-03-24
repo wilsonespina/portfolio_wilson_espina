@@ -7,7 +7,7 @@
     padding: clamp(1rem, 2vw + 1rem, 3rem);
 
     .frame {
-        border: 1px solid black;
+        border: 1px solid $font-color;
         height: 100%;
         width: 100%;
         padding: $page-padding;
@@ -17,7 +17,6 @@
         .header {
             position: relative;
             z-index: 2;
-            max-width: clamp(9rem, 40vw + 1rem, 20rem);
 
             .nav {
                 background-color: rgba($background-color, $text-background-opacity); // TODO - change with new background color
@@ -35,7 +34,7 @@
                     line-height: 1.6;
 
                     a {
-                        font-size: clamp(1.5rem, 1vw + 0.5rem, 3rem);
+                        font-size: clamp(2rem, 1vw + 0.5rem, 3rem);
                         text-decoration: none;
                         opacity: 1;
                     }

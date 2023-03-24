@@ -1,7 +1,9 @@
 @import '../../styles/variables.scss';
 
 .about {
-    position: relative;
+    position: absolute;
+    right: calc($page-padding * 2);
+    bottom: calc($page-padding * 2);
     display: flex;
     justify-content: flex-end;
     height: 100%;
