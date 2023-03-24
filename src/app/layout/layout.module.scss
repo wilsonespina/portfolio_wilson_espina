@@ -22,7 +22,7 @@
                 background-color: rgba($background-color, $text-background-opacity); // TODO - change with new background color
                 // -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
                 //     from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-                // padding-block: $page-padding;
+                padding-block: $page-padding;
                 z-index: 2;
                 position: relative;
                 max-width: fit-content;
@@ -37,7 +37,7 @@
                         
                         &:hover {
                             transform: scale(1.05);
-                            color:rgba($font-color, 0.6);
+                            color: rgba($font-color, 0.6);
                         }
                         a {
                             font-size: clamp(2rem, 1vw + 0.5rem, 3rem);
@@ -47,6 +47,8 @@
                             &.active {
                                 border-inline-start: 3px solid pink;
                                 padding-inline-start: 1em;
+                                // font-weight: 900;
+                                color: #fffffff0;
                             }
                         }
                     }
