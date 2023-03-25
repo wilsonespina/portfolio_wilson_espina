@@ -1,3 +1,4 @@
+@import '../../styles/styles.scss';
 
 @mixin tablet-and-up {
     @media screen and (min-width: 769px) { @content; }
@@ -12,21 +13,20 @@
     @media screen and (max-width: 600px) { @content; }
 }
 
-
 .container{
+    position: absolute;
+    width: calc(100svw - ($page-padding * 5));
+    bottom: calc($page-padding);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 1rem;
-    //   background: linear-gradient(45deg, #209cff, #68e0cf);
     padding: 3rem 0;
-
     display: flex;
     justify-content: end;
 
     h1 {
         font-size: 2rem;
-        // font-family: sans-serif;
     }
 
     .wrapper{
@@ -77,9 +77,9 @@
             .text {
                 color: #4f4f4f;
                 line-height: 1.5;
-                margin-top:0.4rem;
+                margin-top: 0.4rem;
                 @include mobile-only{
-                font-size: .9rem;
+                    font-size: .9rem;
                 }
             }
         }

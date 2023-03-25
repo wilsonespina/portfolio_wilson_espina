@@ -18,9 +18,8 @@
         position: relative;
         width: 100%;
         align-items: flex-end;
-    
         max-width: 45svw;
-    
+
         .icon {
             font-size: clamp(1rem, 3vw + 1rem, 7rem);
             &.js:hover, p {
@@ -29,14 +28,13 @@
                 fill: yellow;
             }
         }
-
     }
 
 
     @media screen and (min-width: 502px) {
         justify-content: end;
         gap: clamp(0.5rem, 2vw + 1rem, 4rem);
-        bottom: calc($page-padding * 3);
+        bottom: calc($page-padding);
     }
 }
 
