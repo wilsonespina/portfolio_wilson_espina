@@ -4,6 +4,7 @@
     // @include container-padding;
     height: 100%;
     width: 100%;
+    z-index: 20;
 }
 
 .icon-list {
@@ -20,10 +21,14 @@
 
     .icon {
         font-size: clamp(2rem, 1.5vw + 1rem, 4rem);
-        &:hover {
-            cursor: pointer;
-            color: purple;
-        }
+        // &:hover {
+        //     cursor: pointer;
+        //     color: $light-blue;
+        // }
+
+        // p:hover {
+        //     color: $light-blue;
+        // }
     }
 
 }

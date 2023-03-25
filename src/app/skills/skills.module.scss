@@ -2,28 +2,42 @@
 
 .skills {
     position: absolute;
-    bottom: calc($page-padding * 3);
+    bottom: -1em;
     width: calc(100svw - ($page-padding * 5));
     display: flex;
-    justify-content: end;
-}
-
-.icon-list-container {
-    display: flex;
-    max-height: 50svh;
-    z-index: 2;
-    flex-flow: column;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: clamp(0.5rem, 2vw + 1rem, 4rem);
-    position: relative;
-    width: 100%;
-    align-items: flex-end;
 
-    max-width: 45svw;
+    .icon-list-container {
+        display: flex;
+        max-height: 50svh;
+        z-index: 20;
+        flex-flow: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(0.5rem, 1vw + 1rem, 4rem);
+        position: relative;
+        width: 100%;
+        align-items: flex-end;
+    
+        max-width: 45svw;
+    
+        .icon {
+            font-size: clamp(1rem, 3vw + 1rem, 7rem);
+            &.js:hover, p {
+                // background-color: pink;
+                color: pink;
+                fill: yellow;
+            }
+        }
 
-    .icon {
-        // flex-basis: 10%;
-        font-size: clamp(1rem, 3vw + 1rem, 7rem);
+    }
+
+
+    @media screen and (min-width: 502px) {
+        justify-content: end;
+        gap: clamp(0.5rem, 2vw + 1rem, 4rem);
+        bottom: calc($page-padding * 3);
     }
 }
+
+

@@ -9,7 +9,8 @@ import styles from './skills.module.scss';
 import { PropsWithChildren } from 'react';
 
 const {
-  skills
+  skills,
+  js
 } = styles;
 
 /* eslint-disable-next-line */
@@ -28,150 +29,67 @@ export function Skills(props: SkillsProps) {
         isVisible={true}>
         <Icon
           icon={faSquareJs}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
+          iconClassName={cn(`${styles['icon']}`, js)}
+          animation={null}
           text="JavaScript"
           hoverAnimation
         />
         <Icon
           icon={faNode}
           iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
+          animation={null}
           text="NodeJS"
           hoverAnimation
         />
         <Icon
           icon={faReact}
           iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
+          animation={null}
           text="ReactJS"
           hoverAnimation
         />
         <Icon
           icon={faAws}
           iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
+          animation={null}
           text="AWS"
           hoverAnimation
         />
         <Icon
           icon={faJenkins}
           iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
+          animation={null}
           text="Jenkins"
           hoverAnimation
         />
         <Icon
           icon={faCss3}
           iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
+          animation={null}
           text="CSS3"
           hoverAnimation
         />
         <Icon
           icon={faHtml5}
           iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
+          animation={null}
           text="HTML5"
           hoverAnimation
         />
         <Icon
           icon={faSass}
           iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
+          animation={null}
           text="SASS"
           hoverAnimation
         />
         <Icon
           icon={faDocker}
           iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
+          animation={null}
           text="Docker"
           hoverAnimation
         />
-
-
-
-        {/* <Icon
-          // icon={faDocker}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="Docker"
-          hoverAnimation
-          CustomIcon={TsLogo}
-        /> */}
-        {/* <TsLogo className={`${styles['icon']}`} /> */}
-
-        {/* <Icon
-          icon={faDocker}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="Docker"
-          hoverAnimation
-        />
-        <Icon
-          icon={faSass}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="SASS"
-          hoverAnimation
-        />
-        <Icon
-          icon={faHtml5}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="HTML5"
-          hoverAnimation
-        />
-        <Icon
-          icon={faHtml5}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="HTML5"
-          hoverAnimation
-        />
-        <Icon
-          icon={faCss3}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="CSS3"
-          hoverAnimation
-        />
-        <Icon
-          icon={faJenkins}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="Jenkins"
-          hoverAnimation
-        />
-        <Icon
-          icon={faAws}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="AWS"
-          hoverAnimation
-        />
-        <Icon
-          icon={faReact}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="ReactJS"
-          hoverAnimation
-        />
-        <Icon
-          icon={faNode}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="NodeJS"
-          hoverAnimation
-        />
-        <Icon
-          icon={faSquareJs}
-          iconClassName={`${styles['icon']}`}
-          animation="fa-bounce"
-          text="JavaScript"
-          hoverAnimation
-        /> */}
       </Animated>
     </div>
   );

@@ -10,7 +10,7 @@ const {
 export interface IconProps {
   icon: IconDefinition,
   iconClassName: string,
-  animation: string,
+  animation: string | null,
   text?: string,
   hoverAnimation?: boolean
 }
