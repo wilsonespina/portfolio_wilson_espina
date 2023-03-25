@@ -19,7 +19,7 @@ export interface LayoutProps extends PropsWithChildren {}
 
 export function Layout(props: LayoutProps) {
   useEffect(() => {
-    canvasAnimation();
+    canvasAnimation(); // TODO - fix buggy animation
   }, [])
 
   return (

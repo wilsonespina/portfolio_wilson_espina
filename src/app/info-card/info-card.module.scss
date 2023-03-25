@@ -3,7 +3,7 @@
 .info-container {
     background-color: rgba($background-color, $text-background-opacity);
     .name {
-        font-weight: 700;
+        font-weight: 600;
         font-size: clamp(3rem, 20vw + 1rem, 8rem);
     }
     .job {

@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
+import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
   cacheDir: './node_modules/.vite/portfolio-wilson-espina',
@@ -21,6 +22,7 @@ export default defineConfig({
     viteTsConfigPaths({
       root: './',
     }),
+    svgr(),
   ],
 
   // Uncomment this if you are using workers.
@@ -38,6 +40,6 @@ export default defineConfig({
       dir: './node_modules/.vitest',
     },
     environment: 'jsdom',
-    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx,svg}'],
   },
 });
