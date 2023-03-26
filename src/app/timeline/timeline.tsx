@@ -24,7 +24,7 @@ export function Timeline(props: TimelineProps) {
       animationOut="fadeOut"
       isVisible={true}>
       <div className={wrapper}>
-        <h1>Work Timeline</h1>
+        <h1 className={styles['main-heading']}>Work Timeline</h1>
         <ul className={sessions}>
           <li className={item}>
             <div className={time}>March 2023</div>
@@ -48,7 +48,8 @@ export function Timeline(props: TimelineProps) {
           </li>
           <li className={item}>
             <div className={time}>October 2017</div>
-            <h2 className={heading}><span role="img" aria-label='Police siren emoji'>🚨</span>CAREER CHANGE<span role="img" aria-label='Police siren emoji'>🚨</span> - Web Development Immersive (WDI) @GA</h2>
+            {/* <h2 className={heading}><span role="img" aria-label='Police siren emoji'>🚨</span>CAREER CHANGE<span role="img" aria-label='Police siren emoji'>🚨</span> - Web Development Immersive (WDI) @GA</h2> */}
+            <h2 className={heading}>Web Development Immersive (WDI) @GA</h2>
             <p className={text}>Switched from Civil Engineering to a career in tech.</p>
           </li>
         </ul>
