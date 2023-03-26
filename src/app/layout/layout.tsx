@@ -25,7 +25,6 @@ export function Layout(props: LayoutProps) {
   return (
     <main className={page}>
       <div className={frame}>
-
         <header className={header}>
           <InfoCard fullName="Wilson Espina" jobTitle="Software Engineer"/>
           <nav className={nav}>

@@ -17,8 +17,7 @@ function NoMatch() {
 export function App() {
   return (
     <>
-    {/* <SplashScreen /> */}
-
+    <SplashScreen />
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<About />} />
