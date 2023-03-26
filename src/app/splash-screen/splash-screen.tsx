@@ -50,7 +50,7 @@ const setFalseAfterDelay = (seconds: number, func: (a: boolean) => void) => {
               animationOut="fadeOut"
               animationOutDuration={1000}
               isVisible={isTextVisible}>
-                <h2 className={text}>Portfolio</h2>
+                <h2 className={text}>PORTFOLIO</h2>
             </Animated>
     </Animated>
   );

@@ -2,12 +2,15 @@
 
 .info-container {
     background-color: rgba($background-color, $text-background-opacity);
+    .name, .job {
+        text-transform: uppercase;
+    }
     .name {
         font-weight: 600;
         font-size: clamp(3rem, 20vw + 1rem, 8rem);
+        font-style: italic;
     }
     .job {
-        text-transform: uppercase;
         font-size: clamp(2rem, 1vw + 1rem, 4rem);
     }
 }

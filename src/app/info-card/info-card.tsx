@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import wilsonIceCreamImage from '../../assets/wilson_ice_cream.png';
+// import wilsonIceCreamImage from '../../assets/wilson_ice_cream.png';
 
 import styles from './info-card.module.scss';
 const {
@@ -7,7 +7,6 @@ const {
   job
 } = styles;
 
-/* eslint-disable-next-line */
 export interface InfoCardProps {
   fullName: string,
   jobTitle: string
