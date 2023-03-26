@@ -2,7 +2,6 @@
 @import './colors';
 @import './variables';
 
-
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@
 }
 html {
     font-size: 62.5% /* makes 1rem 10px */
-    // font-size: clamp(1rem, 2vw, 2rem);
 }
 body {
     font-size: 1.6em; /* default font of 16px */
@@ -18,7 +16,6 @@ body {
     line-height: 1.3;
     color: $font-color;
     background-color: $background-color;
-    // overflow-x: auto;
 }
 /* fonts */
 h1 { font-size: 3rem }
@@ -29,7 +26,7 @@ h4, li, label, input, textarea, select, p {
 }
 h5 { font-size: 1.6rem }
 h6 { font-size: 1.4rem }
-ol, ul { padding-left: 2em }
+ol, ul { padding-left: 2em; list-style: none; }
 
 a,
 a:visited,
@@ -38,7 +35,6 @@ a:active {
     color: inherit;
     text-decoration: none;
 }
-
 
 /******** GLOBAL STYLES *********/
 .flex-container {
