@@ -5,9 +5,17 @@ import viteTsConfigPaths from 'vite-tsconfig-paths';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig(({ command, mode }) => {
-  const env = loadEnv(mode, process.cwd(), '')
+  let minify = false
+  const env = loadEnv(mode, process.cwd(), '');
+
+  if (mode === 'production') {
+    minify = true;
+  }
 
   return ({
+    build: {
+      minify
+    },
     define: {
       __APP_ENV__: env.APP_ENV,
     },
