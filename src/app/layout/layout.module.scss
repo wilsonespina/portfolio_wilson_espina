@@ -22,7 +22,7 @@
 
                 ul {
                     padding-inline: 0;
-                    line-height: 1.6;
+                    line-height: 1.9;
 
                     li {
                         &:hover {
@@ -32,6 +32,8 @@
                             font-size: clamp(2rem, 1vw + 0.5rem, 3rem);
                             text-decoration: none;
                             opacity: 1;
+                            display: block;
+                            width: 35svw;
 
                             &.active {
                                 border-inline-start: 3px solid pink;

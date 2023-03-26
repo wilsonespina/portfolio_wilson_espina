@@ -25,7 +25,7 @@ const setFalseAfterDelay = (seconds: number, func: (a: boolean) => void) => {
   useEffect(() => {
     setFalseAfterDelay(1000, setIsTextVisible);
     setFalseAfterDelay(1500, setIsNameVisible);
-    setFalseAfterDelay(2000, setIsContainerVisible);
+    setFalseAfterDelay(2150, setIsContainerVisible);
   }, [])
 
   return (
