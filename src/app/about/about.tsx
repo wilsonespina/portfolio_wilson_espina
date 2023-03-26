@@ -16,7 +16,6 @@ export function About(props: AboutProps) {
       <Animated
         className={about}
         animationIn="fadeIn"
-        animationInDelay={1000}
         animationInDuration={1000}
         animationOut="fadeOut"
         animationOutDuration={7000}
