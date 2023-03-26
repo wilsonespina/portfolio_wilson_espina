@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://wilson-espina-portfolio.netlify.app/sitemap.xml
+Disallow: /cv
