@@ -6,8 +6,8 @@
     "start": "nx serve",
     "start:prod": "nx run portfolio-wilson-espina:serve:production",
     "build": "nx build",
-    "build:prod": "nx run portfolio-wilson-espina:build:production",
-    "test": "nx test"
+    "test": "nx test",
+    "publish": "npx ntl deploy --prod"
   },
   "private": true,
   "dependencies": {
