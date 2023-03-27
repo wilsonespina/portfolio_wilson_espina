@@ -1,8 +1,17 @@
-/* Your styles goes here. */
+@import '../styles/colors';
+
 .container {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 16rem 0;
-    padding-inline: min(6vw, 12em);
+    height: 100svh;
+    width: 100%;
+
+    a {
+        &:hover {
+            text-decoration: underline;
+            color: $bright-white;
+        }
+    }
 }

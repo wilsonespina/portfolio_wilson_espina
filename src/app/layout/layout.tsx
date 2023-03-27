@@ -1,4 +1,4 @@
-import { PropsWithChildren, useEffect, useState } from 'react';
+import { PropsWithChildren, useEffect } from 'react';
 import { Outlet, NavLink } from "react-router-dom";
 
 import InfoCard from '../info-card/info-card';
@@ -48,6 +48,11 @@ export function Layout(props: LayoutProps) {
                 <NavLink to="/contact" className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? active : ""
                 }>Contact</NavLink>
+              </li>
+              <li>
+                <NavLink to="/cv" target="_blank" rel="noopener noreferrer" className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? active : ""
+                }>CV</NavLink>
               </li>
             </ul>
           </nav>
