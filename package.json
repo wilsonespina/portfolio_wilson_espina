@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
+    "start:prod": "nx run portfolio-wilson-espina:serve:production",
     "build": "nx build",
+    "build:prod": "nx run portfolio-wilson-espina:build:production",
     "test": "nx test"
   },
   "private": true,
