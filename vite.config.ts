@@ -6,7 +6,6 @@ import svgr from 'vite-plugin-svgr';
 
 export default defineConfig(({ command, mode }) => {
   let minify = false
-  const env = loadEnv(mode, process.cwd(), '');
 
   if (mode === 'production') {
     minify = true;
@@ -15,9 +14,6 @@ export default defineConfig(({ command, mode }) => {
   return ({
     build: {
       minify
-    },
-    define: {
-      __APP_ENV__: env.APP_ENV,
     },
     cacheDir: './node_modules/.vite/portfolio-wilson-espina',
 
