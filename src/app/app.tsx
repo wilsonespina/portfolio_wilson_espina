@@ -28,10 +28,10 @@ export function App() {
 
   return (
     <>
-    {/* { (isLocation('/') ||
-      isLocation('/skills') ||
-      isLocation('/experience') ||
-      isLocation('/contact')) && <SplashScreen /> } */}
+    {/* // { (isLocation('/') ||
+    //   isLocation('/skills') ||
+    //   isLocation('/experience') ||
+    //   isLocation('/contact')) && <SplashScreen /> } */}
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<About />} />

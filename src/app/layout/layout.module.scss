@@ -15,10 +15,11 @@
         flex-direction: column;
 
         .header {
-            z-index: 10;
+            z-index: 50;
 
             .nav {
                 padding-block: 1em;
+                max-width: 35svw;
 
                 ul {
                     padding-inline: 0;
@@ -28,12 +29,13 @@
                         &:hover {
                             color: rgba($font-color, 0.6);
                         }
+                        display: inline;
                         a {
-                            font-size: clamp(2rem, 1vw + 0.5rem, 3rem);
+                            font-size: clamp(1.6rem, 1vw + 0.5rem, 3rem);
                             text-decoration: none;
                             opacity: 1;
                             display: block;
-                            width: 35svw;
+                            width: 100%;
 
                             &.active {
                                 border-inline-start: 3px solid pink;

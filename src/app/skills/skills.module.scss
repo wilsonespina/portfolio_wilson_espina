@@ -2,7 +2,7 @@
 
 .skills {
     position: absolute;
-    bottom: -1em;
+    bottom: calc($page-padding * 3);
     width: calc(100svw - ($page-padding * 5));
     display: flex;
     justify-content: center;
@@ -17,8 +17,7 @@
         gap: clamp(0.5rem, 1vw + 1rem, 4rem);
         position: relative;
         width: 100%;
-        align-items: flex-end;
-        max-width: 45svw;
+        max-width: 48svw;
 
         .icon {
             font-size: clamp(1rem, 3vw + 1rem, 7rem);
@@ -33,7 +32,7 @@
     @media screen and (min-width: 502px) {
         justify-content: end;
         gap: clamp(0.5rem, 2vw + 1rem, 4rem);
-        bottom: calc($page-padding);
+        bottom: calc($page-padding * 2);
     }
 }
 

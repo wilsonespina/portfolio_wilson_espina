@@ -2,8 +2,6 @@ import cn from 'classnames';
 import { faSquareJs, faNode, faReact, faAws, faJenkins, faCss3, faHtml5, faSass, faDocker } from '@fortawesome/free-brands-svg-icons';
 import { Animated } from 'react-animated-css';
 import Icon from  '../shared/icon/icon';
-// import tsLogo from '../../assets/typescript-logo.svg';
-import { ReactComponent as TsLogo } from '../../assets/typescript-logo.svg';
 
 import styles from './skills.module.scss';
 import { PropsWithChildren } from 'react';

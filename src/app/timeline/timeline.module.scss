@@ -17,23 +17,32 @@
     width: calc(100svw - ($page-padding * 5));
     display: flex;
     justify-content: center;
-    display: flex;
-    justify-content: end;
     position: relative;
     overflow: auto;
-    z-index: 50;
+    z-index: 20;
 
-    @include tablet-and-up  {
+    @include mobile-and-up  {
         position: absolute;
-        bottom: calc($page-padding * 2);
+        bottom: calc($page-padding * 3);
         align-items: center;
+        justify-content: end;
     }
 
     .wrapper{
         background: $background-color;
-        padding: 2rem;
+        @include mobile-and-up {
+            max-width: 60svw;
+            max-height: 45svh;
+        }
+        @include tablet-and-up  {
+            padding: 2rem;
+            max-height: 60svh;
+        }
 
         .sessions{
+            @include tablet-and-down  {
+                padding-left: 0;
+            }
             .item {
                 padding-bottom: 1.5rem;
                 border-left: 1px solid #abaaed;
@@ -77,10 +86,7 @@
                     line-height: 1.5;
                     margin-top: 0.4rem;
                     @include mobile-only {
-                        font-size: .9rem;
-                    }
-                    @include tablet-and-down {
-                        display: none;
+                        font-size: 1.3rem;
                     }
                 }
             }
