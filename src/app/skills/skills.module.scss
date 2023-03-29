@@ -2,7 +2,7 @@
 
 .skills {
     position: absolute;
-    bottom: calc($page-padding * 3);
+    bottom: calc($page-padding * 1);
     width: calc(100svw - ($page-padding * 5));
     display: flex;
     justify-content: center;
@@ -33,6 +33,7 @@
         justify-content: end;
         gap: clamp(0.5rem, 2vw + 1rem, 4rem);
         bottom: calc($page-padding * 2);
+        right: calc($page-padding * 2);
     }
 }
 
