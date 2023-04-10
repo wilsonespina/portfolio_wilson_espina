@@ -24,16 +24,6 @@ export function Contact(props: ContactProps) {
       isVisible={true}>
       <ul className={styles['icon-list']}>
         <li>
-          <a href="https://twitter.com/wilson_espina" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-            <Icon
-              icon={faTwitter}
-              iconClassName={icon}
-              animation="fa-bounce"
-              text="Twitter"
-            />
-          </a>
-        </li>
-        <li>
           <a href="mailto:wilson.espina@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
             <Icon
               icon={faEnvelope}
@@ -60,6 +50,16 @@ export function Contact(props: ContactProps) {
               iconClassName={icon}
               animation="fa-bounce"
               text="LinkedIn"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wilson_espina" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <Icon
+              icon={faTwitter}
+              iconClassName={icon}
+              animation="fa-bounce"
+              text="Twitter"
             />
           </a>
         </li>

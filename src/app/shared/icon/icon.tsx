@@ -10,7 +10,7 @@ const {
 export interface IconProps {
   icon: IconDefinition,
   iconClassName: string,
-  animation: string | null,
+  animation?: string,
   text?: string,
   hoverAnimation?: boolean
 }
@@ -30,10 +30,10 @@ export function Icon({ iconClassName, icon, animation, text }: IconProps) {
 
   return (
     <div className={styles['icon-container']} onMouseEnter={handleHover} onMouseLeave={handleBlur}>
-      <FontAwesomeIcon
+      {!!icon && <FontAwesomeIcon
         icon={icon}
         className={cn(iconClassName, {[animation]: hover})}
-      />
+      />}
       {!!text && <p className={label}>{text}</p>}
     </div>
   );

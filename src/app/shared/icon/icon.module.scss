@@ -9,14 +9,8 @@
 
     .label {
         text-decoration: none;
+        font-size: clamp(0.5rem, 1vw + 1rem, 3rem);
     }
-
-    // * {
-    //     &:hover, p:hover {
-    //         cursor: pointer;
-    //         color: $light-blue;
-    //     }
-    // }
 
     &:hover {
         * {

@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { faSquareJs, faNode, faReact, faAws, faJenkins, faCss3, faHtml5, faSass, faDocker } from '@fortawesome/free-brands-svg-icons';
+import { faGraphQl, faCSharp, faTypescript, faGithubActions } from '../shared/svgs/svgs';
 import { Animated } from 'react-animated-css';
 import Icon from  '../shared/icon/icon';
 
@@ -15,7 +16,6 @@ const {
 export interface SkillsProps extends PropsWithChildren{}
 
 
-
 export function Skills(props: SkillsProps) {
   return (
     <div className={skills}>
@@ -28,63 +28,78 @@ export function Skills(props: SkillsProps) {
         <Icon
           icon={faSquareJs}
           iconClassName={cn(`${styles['icon']}`, js)}
-          animation={null}
           text="JavaScript"
+          hoverAnimation
+        />
+        <Icon
+          icon={faTypescript}
+          iconClassName={cn(`${styles['icon']}`, js)}
+          text="TypeScript"
           hoverAnimation
         />
         <Icon
           icon={faNode}
           iconClassName={`${styles['icon']}`}
-          animation={null}
           text="NodeJS"
           hoverAnimation
         />
         <Icon
           icon={faReact}
           iconClassName={`${styles['icon']}`}
-          animation={null}
           text="ReactJS"
+          hoverAnimation
+        />
+        <Icon
+          icon={faGraphQl}
+          iconClassName={cn(`${styles['icon']}`)}
+          text="GraphQL"
+          hoverAnimation
+        />
+        <Icon
+          icon={faCSharp}
+          iconClassName={cn(`${styles['icon']}`)}
+          text="C#"
           hoverAnimation
         />
         <Icon
           icon={faAws}
           iconClassName={`${styles['icon']}`}
-          animation={null}
           text="AWS"
           hoverAnimation
         />
         <Icon
           icon={faJenkins}
           iconClassName={`${styles['icon']}`}
-          animation={null}
           text="Jenkins"
+          hoverAnimation
+        />
+        <Icon
+          icon={faGithubActions}
+          iconClassName={`${styles['icon']}`}
+          text="Github Actions"
           hoverAnimation
         />
         <Icon
           icon={faCss3}
           iconClassName={`${styles['icon']}`}
-          animation={null}
           text="CSS3"
           hoverAnimation
         />
         <Icon
           icon={faHtml5}
           iconClassName={`${styles['icon']}`}
-          animation={null}
           text="HTML5"
           hoverAnimation
         />
         <Icon
           icon={faSass}
           iconClassName={`${styles['icon']}`}
-          animation={null}
           text="SASS"
           hoverAnimation
         />
         <Icon
           icon={faDocker}
           iconClassName={`${styles['icon']}`}
-          animation={null}
           text="Docker"
           hoverAnimation
         />
