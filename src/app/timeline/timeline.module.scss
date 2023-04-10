@@ -50,7 +50,7 @@
                 padding-left: 20px;
                 margin-left: 10px;
                 &:last-child{
-                    border: 0px;
+                    border-left: 1px dashed #abaaed;;
                     padding-bottom: 0;
                 }
                 &:before{
@@ -65,7 +65,7 @@
                     transform: rotate(90deg);
                 }
                 .time{
-                    color: $font-color;
+                    color: $light-blue;
                     font-weight: 500;
 
                     @include mobile-and-up{
@@ -79,10 +79,11 @@
                 .heading {
                     font-size: 1.8rem;
                     color: $bright-white;
+                    .emoji {
+                        margin-inline-end: 0.8rem;
+                    }
                 }
                 .text {
-                    color: $light-blue;
-                    font-style: italic;
                     line-height: 1.5;
                     margin-top: 0.4rem;
                     @include mobile-only {
