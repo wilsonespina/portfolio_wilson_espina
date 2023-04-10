@@ -20,7 +20,7 @@
         max-width: 75svw;
 
         .icon {
-            font-size: clamp(1rem, 3vw + 1rem, 7rem);
+            font-size: clamp(3rem, 3vw + 1rem, 4.5rem);
             &.js:hover, p {
                 color: pink;
                 fill: yellow;
