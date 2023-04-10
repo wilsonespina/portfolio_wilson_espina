@@ -1,7 +1,7 @@
 export default function canvasAnimation() {
 
-    let nodes;
-  
+    let nodes: Array<PageNodeType> = [];
+
     // how close next node must be to activate connection (in px)
     // shorter distance == better connection (line width)
     const SENSITIVITY = 100;
@@ -16,17 +16,16 @@ export default function canvasAnimation() {
     const ANCHOR_LENGTH = 20;
     // highlight radius
     const MOUSE_RADIUS = 250;
-  
+
     const circ = 2 * Math.PI;
-    nodes = [];
 
     const R = '102';
     const G = '0';
     const B = '204';
-    
+
     const LINE_COLOR_RGB = `rgba(${R}, ${G}, ${B}, `;
-  
-    const canvas = document.querySelector('canvas');
+
+    const canvas =document.querySelector('canvas') as HTMLCanvasElement;
 
     if (!canvas) return null;
 
@@ -35,12 +34,33 @@ export default function canvasAnimation() {
       x: canvas.width / 2,
       y: canvas.height / 2
     };
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
     if (!ctx) {
       alert("Ooops! Your browser does not support canvas :'(");
     }
-  
-    function Node(this: any, x: number, y: number) {
+
+    interface PageNodeType {
+      anchorX?: number,
+      anchorY?: number,
+      x: number,
+      y: number,
+      vx?: number,
+      vy?: number,
+      energy?: number,
+      radius?: number,
+      siblings?: [],
+      brightness?: number,
+      drawNode?: () => void,
+      drawConnections?: () => void,
+      moveNode?: () => void,
+    }
+    // interface PageNodeType {
+    //   this: PageNodeType,
+    //   x: number,
+    //   y: number
+    // }
+
+    function PageNode(this: PageNodeType, x: number, y: number) {
       this.anchorX = x;
       this.anchorY = y;
       this.x = Math.random() * (x - (x - ANCHOR_LENGTH)) + (x - ANCHOR_LENGTH);
@@ -52,16 +72,16 @@ export default function canvasAnimation() {
       this.siblings = [];
       this.brightness = 0;
     }
-  
-    Node.prototype.drawNode = function() {
+
+    PageNode.prototype.drawNode = function() {
       const color = LINE_COLOR_RGB + this.brightness + ")";
       ctx.beginPath();
       ctx.arc(this.x, this.y, 2 * this.radius + 2 * this.siblings.length / SIBLINGS_LIMIT, 0, circ);
       ctx.fillStyle = color;
       ctx.fill();
     };
-  
-    Node.prototype.drawConnections = function() {
+
+    PageNode.prototype.drawConnections = function() {
       for (let i = 0; i < this.siblings.length; i++) {
         const color = LINE_COLOR_RGB + this.brightness + ")";
         ctx.beginPath();
@@ -72,8 +92,8 @@ export default function canvasAnimation() {
         ctx.stroke();
       }
     };
-  
-    Node.prototype.moveNode = function() {
+
+    PageNode.prototype.moveNode = function() {
       this.energy -= 2;
       if (this.energy < 1) {
         this.energy = Math.random() * 100;
@@ -95,19 +115,19 @@ export default function canvasAnimation() {
       this.x += this.vx * this.energy / 100;
       this.y += this.vy * this.energy / 100;
     };
-  
+
     function initNodes() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       nodes = [];
       for (let i = DENSITY; i < canvas.width; i += DENSITY) {
         for (let j = DENSITY; j < canvas.height; j += DENSITY) {
-          nodes.push(new Node(i, j));
+          nodes.push(new (PageNode as any)(i, j));
           NODES_QTY++;
         }
       }
     }
 
-    function calcDistance(node1, node2) {
+    function calcDistance(node1: PageNodeType, node2: PageNodeType) {
       return Math.sqrt(Math.pow(node1.x - node2.x, 2) + (Math.pow(node1.y - node2.y, 2)));
     }
 
@@ -155,6 +175,8 @@ export default function canvasAnimation() {
         distance = calcDistance({
           x: mouse.x,
           y: mouse.y
+          // x: mouseX,
+          // y: mouseY
         }, node);
         if (distance < MOUSE_RADIUS) {
           node.brightness = 1 - distance / MOUSE_RADIUS;
@@ -183,12 +205,22 @@ export default function canvasAnimation() {
       canvas.height = window.innerHeight;
     }
 
-    function mousemoveHandler(e: Event) {
+    function mousemoveHandler(e: MouseEvent) {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     }
 
-    initHandlers();
-    initNodes();
-    redrawScene();
+    // initHandlers();
+    // initNodes();
+    // redrawScene();
+
+    return {
+      init: () => {
+        console.log('INIT')
+        initHandlers();
+        initNodes();
+        redrawScene();
+      },
+      redrawScene: redrawScene
+    }
   };

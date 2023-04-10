@@ -1,4 +1,4 @@
-import { PropsWithChildren, useEffect } from 'react';
+import { PropsWithChildren, useEffect, useState, useRef } from 'react';
 import { Outlet, NavLink } from "react-router-dom";
 import InfoCard from '../info-card/info-card';
 import canvasAnimation from '../canvas/animation';
@@ -16,12 +16,45 @@ const {
 export interface LayoutProps extends PropsWithChildren {}
 
 export function Layout(props: LayoutProps) {
+  const [mousePosition, setMousePosition] = useState({
+    left: 0,
+    top: 0
+  });
+
+  // const animation = useMemo(() => canvasAnimation(), []);
+
+  const handleMouseMove = (e: MouseEvent) => {
+    e.preventDefault();
+    setMousePosition({left: e.clientX, top: e.clientY});
+  }
+
+  // let animation: { init: void, redrawScene: void } | null;
+  let animation: { init: () => void; redrawScene: () => void; } | null = null;
+
   useEffect(() => {
-    canvasAnimation(); // TODO - fix buggy animation
+    console.log("🚀 ~ file: layout.tsx:37 ~ useEffect ~ animation:", animation)
+
+    if (animation === null) {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      animation = canvasAnimation();
+      animation?.init()
+    }
+
+    // if (animation && 'redrawScene' in animation) {
+    //   animation.redrawScene()
+    // }
+    // canvasAnimation(); // TODO - fix buggy animation
   }, [])
 
+  // useEffect(() => {
+    // canvasAnimation(); // TODO - fix buggy animation
+    // const animation = canvasAnimation();
+    // console.log('REDRAW', mousePosition.left, mousePosition.top)
+    // animation?.redrawScene();
+  // }, [mousePosition])
+
   return (
-    <main className={page}>
+    <main className={page} onMouseMove={(e)=> handleMouseMove(e)}>
       <div className={frame}>
         <header className={header}>
           <InfoCard fullName="Wilson Espina" jobTitle="Software Engineer"/>

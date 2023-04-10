@@ -1,5 +1,4 @@
 import cn from 'classnames';
-// import wilsonIceCreamImage from '../../assets/wilson_ice_cream.png';
 
 import styles from './info-card.module.scss';
 const {
