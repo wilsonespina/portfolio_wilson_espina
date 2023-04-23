@@ -22,7 +22,7 @@ export function About(props: AboutProps) {
         isVisible={true}>
         <div className={container}>
           <p className={text}>
-            Born in London and currently based in Wellington, New Zealand. I'm an experienced Frontend Software Engineer specialising in making beautiful web pages
+            Born in London and currently based in Wellington, New Zealand. I'm an experienced Frontend Software Engineer specialising in making beautiful websites
           </p>
         </div>
       </Animated>
