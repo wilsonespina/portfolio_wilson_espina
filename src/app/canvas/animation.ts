@@ -1,7 +1,24 @@
+export interface INode {
+  anchorX: number;
+  anchorY: number;
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  energy: number;
+  radius: number;
+  siblings: Node[];
+  brightness: number;
+  drawNode: () => void;
+  drawConnections: () => void;
+  moveNode: () => void;
+}
+
 export default function canvasAnimation() {
 
-    let nodes;
-  
+    // let nodes;
+    let nodes: INode[];
+
     // how close next node must be to activate connection (in px)
     // shorter distance == better connection (line width)
     const SENSITIVITY = 100;
@@ -40,7 +57,7 @@ export default function canvasAnimation() {
       alert("Ooops! Your browser does not support canvas :'(");
     }
   
-    function Node(this: any, x: number, y: number) {
+    function Node(this: INode, x: number, y: number) {
       this.anchorX = x;
       this.anchorY = y;
       this.x = Math.random() * (x - (x - ANCHOR_LENGTH)) + (x - ANCHOR_LENGTH);
@@ -52,6 +69,8 @@ export default function canvasAnimation() {
       this.siblings = [];
       this.brightness = 0;
     }
+
+    if (!ctx) return null;
   
     Node.prototype.drawNode = function() {
       const color = LINE_COLOR_RGB + this.brightness + ")";
@@ -97,6 +116,8 @@ export default function canvasAnimation() {
     };
   
     function initNodes() {
+
+      if (!ctx || !canvas) return null;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       nodes = [];
       for (let i = DENSITY; i < canvas.width; i += DENSITY) {
@@ -107,7 +128,7 @@ export default function canvasAnimation() {
       }
     }
 
-    function calcDistance(node1, node2) {
+    function calcDistance(node1: INode, node2: INode | Node) {
       return Math.sqrt(Math.pow(node1.x - node2.x, 2) + (Math.pow(node1.y - node2.y, 2)));
     }
 
