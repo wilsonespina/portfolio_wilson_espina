@@ -1,7 +1,7 @@
 import { PropsWithChildren, useEffect } from 'react';
 import { Outlet, NavLink } from "react-router-dom";
 import InfoCard from '../info-card/info-card';
-import canvasAnimation from '../canvas/animation';
+
 import styles from './layout.module.scss';
 
 const {
@@ -16,10 +16,6 @@ const {
 export interface LayoutProps extends PropsWithChildren {}
 
 export function Layout(props: LayoutProps) {
-  useEffect(() => {
-    canvasAnimation(); // TODO - fix buggy animation
-  }, [])
-
   return (
     <main className={page}>
       <div className={frame}>

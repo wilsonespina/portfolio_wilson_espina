@@ -3,6 +3,7 @@
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "./src",
   "projectType": "application",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nrwl/vite:build",
@@ -54,7 +55,7 @@
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/portfolio-wilson-espina"],
+      "outputs": ["{projectRoot}/coverage/portfolio-wilson-espina"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "coverage/portfolio-wilson-espina"
@@ -67,6 +68,5 @@
         "lintFilePatterns": ["./src/**/*.{ts,tsx,js,jsx}"]
       }
     }
-  },
-  "tags": []
+  }
 }

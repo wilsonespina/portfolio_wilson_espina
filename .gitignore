@@ -51,3 +51,5 @@ TODO.md
 .env.test.local
 .env.production.local
 .env.production
+.nx/cache
+.nx/workspace-data

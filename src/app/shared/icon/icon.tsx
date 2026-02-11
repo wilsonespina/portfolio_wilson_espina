@@ -32,7 +32,7 @@ export function Icon({ iconClassName, icon, animation, text }: IconProps) {
     <div className={styles['icon-container']} onMouseEnter={handleHover} onMouseLeave={handleBlur}>
       {!!icon && <FontAwesomeIcon
         icon={icon}
-        className={cn(iconClassName, {[animation]: hover})}
+        className={cn(iconClassName, animation ? {[animation]: hover} : undefined)}
       />}
       {!!text && <p className={label}>{text}</p>}
     </div>
