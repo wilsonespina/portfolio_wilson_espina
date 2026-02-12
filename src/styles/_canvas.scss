@@ -1,13 +1,13 @@
-@import './variables';
+@use 'variables';
 
 canvas {
     position: absolute;
-    top: $page-padding;
-    left: $page-padding;
-    width: calc(100% - 2 * $page-padding);
-    height: calc(100% - 2 * $page-padding);
+    top: variables.$page-padding;
+    left: variables.$page-padding;
+    width: calc(100% - 2 * variables.$page-padding);
+    height: calc(100% - 2 * variables.$page-padding);
     // background-color: #25003a;
     overflow: hidden;
     z-index: 1;
-    padding: $page-padding;
+    padding: variables.$page-padding;
 }
