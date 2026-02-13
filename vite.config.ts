@@ -17,6 +17,14 @@ export default defineConfig(({ command, mode }) => {
     },
     cacheDir: './node_modules/.vite/portfolio-wilson-espina',
 
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern'
+        }
+      }
+    },
+
     server: {
       port: 4200,
       host: 'localhost',

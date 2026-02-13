@@ -1,18 +1,17 @@
-// @use 'variables';
-@import '../../styles/variables';
-@import '../../styles/colors';
+@use '../../styles/variables' as vars;
+@use '../../styles/colors' as colors;
 
 .page {
-    background-color: $background-color;
+    background-color: vars.$background-color;
     height: 100svh;
     width: 100svw;
     padding: clamp(1rem, 2vw + 1rem, 3rem);
 
-    .frame {
-        border: 1px solid $font-color;
+        .frame {
+        border: 1px solid vars.$font-color;
         height: 100%;
         width: 100%;
-        padding: $page-padding;
+        padding: vars.$page-padding;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -32,7 +31,7 @@
 
                     li {
                         &:hover {
-                            color: rgba($font-color, 0.6);
+                            color: rgba(vars.$font-color, 0.6);
                         }
                         display: inline;
                         a {
@@ -45,7 +44,7 @@
                             &.active {
                                 border-inline-start: 3px solid pink;
                                 padding-inline-start: 1em;
-                                color: $bright-white;
+                                color: colors.$bright-white;
                             }
                         }
                     }

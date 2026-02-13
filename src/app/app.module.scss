@@ -1,4 +1,4 @@
-@import '../styles/colors';
+@use '../styles/colors' as colors;
 
 .container {
     display: flex;
@@ -11,7 +11,7 @@
     a {
         &:hover {
             text-decoration: underline;
-            color: $bright-white;
+            color: colors.$bright-white;
         }
     }
 }

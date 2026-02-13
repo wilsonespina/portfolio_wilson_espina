@@ -1,9 +1,9 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables' as vars;
 
 .about {
     position: absolute;
-    right: calc($page-padding * 2);
-    bottom: calc($page-padding * 2);
+    right: calc(vars.$page-padding * 2);
+    bottom: calc(vars.$page-padding * 2);
     display: flex;
     justify-content: flex-end;
     height: 100%;
@@ -17,8 +17,8 @@
         max-width: fit-content;
 
         .text {
-            background-color: rgba($background-color, $text-background-opacity);
-            font-size: $text-font-size-large;
+            background-color: rgba(vars.$background-color, vars.$text-background-opacity);
+            font-size: vars.$text-font-size-large;
             max-width: 20rem;
             line-height: 2;
         }

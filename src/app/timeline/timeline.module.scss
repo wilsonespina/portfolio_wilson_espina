@@ -1,6 +1,6 @@
-@import '../../styles/styles.scss';
-@import '../../styles/variables';
-@import '../../styles/colors';
+@use '../../styles/styles';
+@use '../../styles/variables' as vars;
+@use '../../styles/colors' as colors;
 
 @mixin tablet-and-up {
     @media screen and (min-width: 769px) { @content; }
@@ -16,7 +16,7 @@
 }
 
 .container{
-    width: calc(100svw - ($page-padding * 5));
+    width: calc(100svw - (vars.$page-padding * 5));
     display: flex;
     justify-content: center;
     position: relative;
@@ -25,13 +25,13 @@
 
     @include mobile-and-up  {
         position: absolute;
-        bottom: calc($page-padding * 3);
+        bottom: calc(vars.$page-padding * 3);
         align-items: center;
         justify-content: end;
     }
 
-    .wrapper{
-        background: $background-color;
+        .wrapper{
+        background: vars.$background-color;
         @include mobile-and-up {
             max-width: 60svw;
             max-height: 45svh;
@@ -67,7 +67,7 @@
                     transform: rotate(90deg);
                 }
                 .time{
-                    color: $light-blue;
+                    color: colors.$light-blue;
                     font-weight: 500;
 
                     @include mobile-and-up{
@@ -80,7 +80,7 @@
                 }
                 .heading {
                     font-size: 1.8rem;
-                    color: $bright-white;
+                    color: colors.$bright-white;
                     .emoji {
                         margin-inline-end: 0.8rem;
                     }
